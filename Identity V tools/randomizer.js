@@ -101,6 +101,7 @@ let right = [
     `2 Escape`,
     `3 Escape`,
     `Curiosity`,
+    
 ]
 
 function randomS3() {
