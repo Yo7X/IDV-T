@@ -19,6 +19,13 @@
     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 </head>
 
+<!--
+    Copy to nest version
+
+    -Index
+    -Randomizer
+-->
+
 <body onload="{size(); srt(); cng(); scramble();}" onresize="{size()}">
     <div id="maindeco01" style="height: 1000px; width: 235px; background-color: rgba(117, 62, 189, 0.774); top: 0px; left: 0px; border: 2px solid white; position: absolute; z-index: 1;">
         <button id="bt001" onclick="{bt1()}" class="button" style="font-size: 30px; top: 15px; left: 15px;">Randomizers</button>
@@ -33,10 +40,9 @@
         <div id="default" style="display: block; ">
             <h1>Identity V tools</h1>
             <h3><a href="https://www.youtube.com/channel/UCnHHxFU-nYnuKMC7TKnhXqA">By yo7</a></h3>
-            <p title="You know who you are">
-                If you use this in a YouTube video or something I would appreciate credit in the form of a link to this site in the <br>
-                description/pinned comment otherwise im going to have to end up pasting my name all over every page <br> <br>
-                (Really sick of people stealing my content)
+            <p title="7">
+                Please include a link to this site if you use these tools in a video/stream <br> <br>
+                Want to give feedback or share ideas? <br> Join my <a href="https://discord.gg/WqvsKqURPr">discord server</a> ill see if I can add it
             </p>
         </div>
 
@@ -45,16 +51,17 @@
             <button onclick="{randomS1()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651);">Survivor</button>
             <button onclick="{randomS2()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Survivor team</button>
             <button onclick="{randomS3()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 20px;">Survivor persona</button>
+            <button onclick="{randomS4()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 20px;">Full survivor set</button>
 
             <br><br>
 
-        <button onclick="{randomH1()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651);">Hunter</button>
-        <button onclick="{randomH2()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Hunter trait</button>
-        <button onclick="{randomH3()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Hunter persona</button>
-        <button onclick="{randomH4()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Full hunter set</button>
+            <button onclick="{randomH1()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651);">Hunter</button>
+            <button onclick="{randomH2()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Hunter trait</button>
+            <button onclick="{randomH3()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Hunter persona</button>
+            <button onclick="{randomH4()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Full hunter set</button>
 
         <br><br>
-            <div id="rndm_result"></div><br>
+            <div style="font-size: 30px;" id="rndm_result"></div><br>
         </div>
 
         <div id="pg002" style="display: none;">WIP</div>
@@ -103,7 +110,7 @@
     <button class="button" style="background-color: rgba(35, 26, 129, 0.582); position:relative;" onclick="{spk()}">Read</button>
         </div>
         <div id="pg005" style="display: none;">
-            <table style="font-size: 30px; user-select: none;">
+            <table style="font-size: 30px; user-select: none; margin-top: 50px;">
                 <caption>Identity V bingo</caption>
                 <tr>
                     <td id="card_1" width="15px" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_1').style.backgroundColor === 'green') {document.getElementById('card_1').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_1').style.backgroundColor = 'green'}">zz</td>
