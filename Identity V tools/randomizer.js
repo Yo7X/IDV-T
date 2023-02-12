@@ -67,10 +67,20 @@ let hunter = [
     `Hermit`
 ];
 
+let trait = [
+    `Listen`,
+    `Abnormal`,
+    `Excitement`,
+    `Patroller`,
+    `Teleport`,
+    `Peeper`,
+    `Blink`
+];
+
 function randomS1() {
     let random = survivors[Math.floor(Math.random() * survivors.length)]
 
-    document.getElementById('rndm_result').innerHTML = random
+    document.getElementById('rndm_result').innerHTML = `Your random survivor is <br> <h1>` + random + `</h1>`
 }
 
 function randomS2() {
@@ -79,21 +89,33 @@ function randomS2() {
     let random3 = survivors[Math.floor(Math.random() * survivors.length)]
     let random4 = survivors[Math.floor(Math.random() * survivors.length)]
 
-    document.getElementById('rndm_result').innerHTML = random + ', ' + random2 + ', ' + random3 + ', ' + random4
+    document.getElementById('rndm_result').innerHTML = `Your random survivors are <br> <h2>` + random + ', ' + random2 + ', ' + random3 + ', ' + random4 + `</h2>`
 }
 
+let right = [
+    `Borrowed time`,
+    `1 Compesate`,
+    `2 Compesate`,
+    `3 Compesate`,
+    `1 Escape`,
+    `2 Escape`,
+    `3 Escape`,
+    `Curiosity`,
+]
+
 function randomS3() {
-        alert(`I'm still working on this one`)
 }
 
 function randomH1() {
     let random = hunter[Math.floor(Math.random() * hunter.length)]
 
-    document.getElementById('rndm_result').innerHTML = random
+    document.getElementById('rndm_result').innerHTML = `Your random hunter is <br> <h1>` + random + `</h1>`
 }
 
 function randomH2() {
-        alert(`I'm still working on this one`)
+    let random = trait[Math.floor(Math.random() * trait.length)]
+
+    document.getElementById('rndm_result').innerHTML = `Your random trait is <br> <h1>` + random + `</h1>`
 }
 
 function randomH3() {
