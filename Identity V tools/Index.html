@@ -14,10 +14,21 @@
     <script src="tts.js"></script>
     <script src="trivia.js"></script>
     <script src="bingo.js"></script>
+    <script src="skin.js"></script>
 
     <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 </head>
+
+<!--
+    Copy to nest version
+
+    -Index
+    -Skin.js
+    -bingo.js
+    -trivia.js
+-->
+
 <body onload="{size(); srt(); cng(); scramble();}" onresize="{size()}">
     <div id="maindeco01" style="height: 1000px; width: 235px; background-color: rgba(117, 62, 189, 0.774); top: 0px; left: 0px; border: 2px solid white; position: absolute; z-index: 1;">
         <button id="bt001" onclick="{bt1()}" class="button" style="font-size: 30px; top: 15px; left: 15px;">Randomizers</button>
@@ -25,6 +36,7 @@
         <button id="bt003" onclick="{bt3()}" class="button" style="top: 195px; left: 15px;">Trivia</button>
         <button id="bt004" onclick="{bt4()}" class="button" style="top: 285px; left: 15px;">TTS</button>
         <button id="bt005" onclick="{bt5()}" class="button" style="top: 375px; left: 15px;">Bingo</button>
+        <button id="bt006" onclick="{bt6()}" class="button" style="font-size: 30px; top: 460px; left: 15px;">Essence pull</button>
     </div>
 
     <div id="maindeco02" style="height: 1000px; width: 2000px; background-color: rgba(20, 14, 82, 0.911); top: 0px; left: 235px; position: absolute;">
@@ -61,14 +73,14 @@
 
         <div id="pg003" style="display: none;">
             <h1>Identity V trivia</h1>
-            <div id="wl" style="font-size: 50px;">Correct: 0 <br> Wrong: 0</div><br>
+            <div id="wl" style="font-size: 50px;">Correct: N/A</div><br>
             <hr>
             <br>
             <div id="question" style="font-size: 33px;">Question</div><br>
             <div id="cat" style="font-size: 33px;">Category</div><br>
-            <button id="an01" onclick="{ans01()}" class="button" style="position:relative; background-color: rgb(129, 15, 139);">Answer01</button>
-            <button id="an02" onclick="{ans02()}" class="button" style="position:relative; background-color: rgb(129, 15, 139);">Answer02</button>
-            <button id="an03" onclick="{ans03()}" class="button" style="position:relative; background-color: rgb(129, 15, 139);">Answer03</button>
+            <button id="an01" onclick="{ans01()}" class="button" style="position:relative; height: fit-content; background-color: rgb(129, 15, 139);">Answer01</button>
+            <button id="an02" onclick="{ans02()}" class="button" style="position:relative; height: fit-content; background-color: rgb(129, 15, 139);">Answer02</button>
+            <button id="an03" onclick="{ans03()}" class="button" style="position:relative; height: fit-content; background-color: rgb(129, 15, 139);">Answer03</button>
         </div>
 
         <div id="pg004" style="display: none;">
@@ -132,6 +144,23 @@
             <br><br>
             <button style="background-color: rgba(35, 26, 129, 0.582); position:relative;" class="button" onclick="{scramble()}">Scramble</button>
         </div>
+        <div id="pg006" style="display: none;">
+        <h1>Eggie is the best idv player in the world</h1>
+
+        <select id="sel02">
+            <option value="a">Essence 1</option> 
+            <option value="b" selected="">Essence 2</option> 
+            <option value="c">Essence 3</option> 
+            <option value="d">Essence 4</option> 
+        </select>
+
+        <br><br><br>
+
+        <img width="100px" height="100px" style="background-color: red;" src="" onclick="pull()"> <br><br>
+
+        <div id="skinstorage"></div>  <br><br>
+        <buttton onclick="test()">XX</buttton>
+    </div>
     </center>
     </div>
 </body>
