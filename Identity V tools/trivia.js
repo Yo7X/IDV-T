@@ -11,14 +11,7 @@ let ar = [
     ['The "Im stuck" ping is also used to imforme your team that you are', 'Vocabulary', 'lagging', 'In a bod kitting spot', 'Need suport urgently', 'lagging'],
     ['Have you subscribed to yo7 on YouTube', 'self promotion', '7', '7', '7', '7'],
     ['What is the max amount of persona points you can spend per page?', 'General', '100', '120', '150', '120'],
-    //['question', 'catagory', 'answer1', 'answer2', 'answer3', 'right answer'],
 ];
-
-//catagorys
-//Skins
-//Vocabulary
-//General
-//Game mechanics
 
 x = 0
 win = 0
