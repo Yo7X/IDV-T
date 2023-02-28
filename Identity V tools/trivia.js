@@ -1,3 +1,5 @@
+//Why is this not updating
+
 let ar = [
     ['What character got the first SS tier skin?', 'Skins', 'Perfumer', 'Priestess', 'Coordinator', 'Perfumer'],
     ['When was the golbal version of idv released', 'General', 'July 2018', 'May 2020', 'March 2017', 'July 2018'],
