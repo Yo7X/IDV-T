@@ -20,6 +20,13 @@
     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 </head>
 
+<!--
+    Copy to nest version
+
+    -Index
+    -randomizer
+-->
+
 <body onload="{size(); srt(); cng(); scramble();}" onresize="{size()}">
     <div id="maindeco01" style="height: 1000px; width: 235px; background-color: rgba(117, 62, 189, 0.774); top: 0px; left: 0px; border: 2px solid white; position: absolute; z-index: 1;">
         <button id="bt001" onclick="{bt1()}" class="button" style="font-size: 30px; top: 15px; left: 15px;">Randomizers</button>
@@ -37,7 +44,7 @@
             <h3><a href="https://www.youtube.com/channel/UCnHHxFU-nYnuKMC7TKnhXqA">By yo7</a></h3>
             <p title="7">
                 Please include a link to this site if you use these tools in a video/stream <br> <br>
-                Want to give feedback or share ideas? <br> Join my <a href="https://discord.gg/WqvsKqURPr">discord server</a> ill see if I can add it
+                Want to give feedback or share ideas? <br> Join my <a target="_blank" href="https://discord.gg/WqvsKqURPr">discord server</a> ill see if I can add it
             </p>
         </div>
 
@@ -56,7 +63,7 @@
             <button onclick="{randomH4()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Full hunter set</button>
 
         <br><br>
-            <div style="font-size: 30px;" id="rndm_result"></div><br>
+            <div style="font-size: 30px; overflow-y: scroll; height: 600px;" id="rndm_result"></div><br>
         </div>
 
         <div id="pg002" style="display: none;">WIP</div>
