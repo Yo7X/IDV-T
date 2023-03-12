@@ -24,7 +24,8 @@
     Copy to nest version
 
     -Index
-    -randomizer
+    -Lucky run html
+    -images
 -->
 
 <body onload="{size(); srt(); cng(); scramble();}" onresize="{size()}">
@@ -41,10 +42,17 @@
         <center>
         <div id="default" style="display: block; ">
             <h1>Identity V tools</h1>
-            <h3><a href="https://www.youtube.com/channel/UCnHHxFU-nYnuKMC7TKnhXqA">By yo7</a></h3>
+            <h3><a href="https://www.youtube.com/channel/UCnHHxFU-nYnuKMC7TKnhXqA" target="_blank">By yo7</a></h3>
             <p title="7">
                 Please include a link to this site if you use these tools in a video/stream <br> <br>
-                Want to give feedback or share ideas? <br> Join my <a target="_blank" href="https://discord.gg/WqvsKqURPr">discord server</a> ill see if I can add it
+                Want to give feedback, share ideas, or find any bugs? <br> Join my <a target="_blank" href="https://discord.gg/WqvsKqURPr">discord server</a> ill see what I can do <br><br><br>
+
+                Lastly remember im just one person so it takes me a while to update stuff
+
+                <br><br><br><br>
+                <h3><p>Web games for long queue times</p></h3>
+                <a href="lucky-run.html" target="_blank">Lucky run</a>
+                
             </p>
         </div>
 
@@ -66,7 +74,29 @@
             <div style="font-size: 30px; overflow-y: scroll; height: 600px;" id="rndm_result"></div><br>
         </div>
 
-        <div id="pg002" style="display: none;">WIP</div>
+        <div id="pg002" style="display: none;">
+            <h2>Community voted tier list</h2>
+            <h5>This tab is on the back burner but im still working on it</h5>
+            <div style="background-color: gold; overflow: hidden; margin-left: 70px; margin-right: 300px; height: fit-content;">
+                <img src="img/S.png" width="160px" height="100px" align="left" style="background-color: rgb(197, 168, 0);">
+            </div>
+            <br>
+            <div style="background-color: rgb(197, 0, 197); overflow: hidden; margin-left: 70px; margin-right: 300px; height: fit-content;">
+                <img src="img/A.png" width="160px" height="100px" align="left" style="background-color: purple">
+            </div>
+            <br>
+            <div style="background-color: rgb(0, 180, 0); overflow: hidden; margin-left: 70px; margin-right: 300px; height: fit-content;">
+                <img src="img/B.png" width="160px" height="100px" align="left" style="background-color: green;">
+            </div>
+            <br>
+            <div style="background-color: cyan; overflow: hidden; margin-left: 70px; margin-right: 300px; height: fit-content;">
+                <img src="img/C.png" width="160px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
+            </div>
+            <br>
+            <div style="background-color: red; overflow: hidden; margin-left: 70px; margin-right: 300px; height: fit-content;">
+                <img src="img/D.png" width="160px" height="100px" align="left" style="background-color: rgb(189, 0, 0)">
+            </div>
+        </div>
 
 
         <div id="pg003" style="display: none;">
@@ -143,18 +173,19 @@
             <button style="background-color: rgba(35, 26, 129, 0.582); position:relative;" class="button" onclick="{scramble()}">Scramble</button>
         </div>
         <div id="pg006" style="display: none;">
-        <h1>Eggie is the best idv player in the world</h1>
+        <h1 title="Eggie is the best idv player in the world">Essence pull</h1>
+        <h5>This is also still a work in progress</h5>
 
         <select id="sel02">
-            <option value="a">Essence 1</option> 
-            <option value="b" selected="">Essence 2</option> 
+            <option value="a" selected="">Essence 1</option> 
+            <option value="b">Essence 2</option> 
             <option value="c">Essence 3</option> 
             <option value="d">Essence 4</option> 
         </select>
 
         <br><br><br>
 
-        <img width="100px" height="100px" style="background-color: red;" src="" onclick="pull()"> <br><br>
+        <img width="100px" height="100px" style="background-color: red;" alt="image failed to load click me instead" src="" onclick="pull()"> <br><br>
 
         <div id="skinstorage"></div>  <br><br>
         <buttton onclick="test()">XX</buttton>
