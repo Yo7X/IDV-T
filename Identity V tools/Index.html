@@ -24,7 +24,7 @@
     Copy to nest version
 
     -Index
-    -Lucky run html
+    -randomizer
     -images
 -->
 
@@ -45,10 +45,8 @@
             <h3><a href="https://www.youtube.com/channel/UCnHHxFU-nYnuKMC7TKnhXqA" target="_blank">By yo7</a></h3>
             <p title="7">
                 Please include a link to this site if you use these tools in a video/stream <br> <br>
-                Want to give feedback, share ideas, or find any bugs? <br> Join my <a target="_blank" href="https://discord.gg/WqvsKqURPr">discord server</a> ill see what I can do <br><br><br>
-
-                Lastly remember im just one person so it takes me a while to update stuff
-
+                If you find these tools helfull I also have a <a target="_blank" href="https://shorturl.at/vzQX7 ">discord bot</a> centered around idv <br><br>
+                If you want to give feedback, share ideas, or find any bugs <br> you can also join my <a target="_blank" href="https://discord.gg/WqvsKqURPr">discord server</a> ill see what I can do
                 <br><br><br><br>
                 <h3><p>Web games for long queue times</p></h3>
                 <a href="Idle-V.html" target="_blank">Idle V</a>
@@ -74,9 +72,9 @@
             <div style="font-size: 30px; overflow-y: scroll; height: 600px;" id="rndm_result"></div><br>
         </div>
 
-        <div id="pg002" style="display: none;">
-            <h2>Community voted tier list</h2>
-            <h5>This tab is on the back burner but im still working on it</h5>
+        <div id="pg002" style="display: none; overflow-y: scroll; height: 600px">
+            <h1>Community voted tier list</h1>
+            <h5>Im still building the vote system</h5>
             <div style="background-color: gold; overflow: hidden; margin-left: 70px; margin-right: 300px; height: fit-content;">
                 <img src="img/S.png" width="160px" height="100px" align="left" style="background-color: rgb(197, 168, 0);">
             </div>
@@ -95,6 +93,10 @@
             <br>
             <div style="background-color: red; overflow: hidden; margin-left: 70px; margin-right: 300px; height: fit-content;">
                 <img src="img/D.png" width="160px" height="100px" align="left" style="background-color: rgb(189, 0, 0)">
+            </div>
+            <br>
+            <div style="background-color: grey; overflow: hidden; margin-left: 70px; margin-right: 300px; height: fit-content;">
+                <img src="img/Unranked.png" width="160px" height="100px" align="left" style="background-color: rgb(80, 80, 80)">
             </div>
         </div>
 
@@ -171,10 +173,12 @@
             </table>
             <br><br>
             <button style="background-color: rgba(35, 26, 129, 0.582); position:relative;" class="button" onclick="{scramble()}">Scramble</button>
+            <br><br>
+            <input id="typespace" type="text" value="" placeholder="Input your own space"> <button onclick="{addspace()}">Add</button> <button onclick="{removespace()}">Remove</button>
         </div>
         <div id="pg006" style="display: none;">
         <h1 title="Eggie is the best idv player in the world">Essence pull</h1>
-        <h5>This is also still a work in progress</h5>
+        <h5>This is still a work in progress</h5>
 
         <select id="sel02">
             <option value="a" selected="">Essence 1</option> 
@@ -185,10 +189,10 @@
 
         <br><br><br>
 
-        <img width="100px" height="100px" style="background-color: red;" alt="image failed to load click me instead" src="" onclick="pull()"> <br><br>
+        <img width="100px" height="100px" style="background-color: red;" alt="image failed to load" src="" onclick="pull()"> <br><br>
 
         <div id="skinstorage"></div>  <br><br>
-        <buttton onclick="test()">XX</buttton>
+        <buttton class="button" onclick="skinivn()" style="position: relative; padding: 2px;">View inventory</buttton>
     </div>
     </center>
     </div>
