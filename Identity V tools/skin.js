@@ -1,14 +1,14 @@
 let essence001 = [
-    `Goldsmith`,
+    [`Goldsmith`, `1`, `S`],
 
-    `Spring Hand`,
-    `Punk`,
+    [`Spring Hand`, `1`, `A`],
+    [`Punk`, `1`, `A`],
 
-    `Barber`,
-    `Distiller`,
-    `Harley Rider`,
-    `Lasso`,
-    `Party Host`
+    [`Barber`, `1`, `B`],
+    [`Distiller`, `1`, `B`],
+    [`Harley Rider`, `1`, `B`],
+    [`Lasso`, `1`, `B`],
+    [`Party Host`, `1`, `B`]
 ];
 
 let essence002 = [
@@ -24,38 +24,35 @@ let essence002 = [
     [`Party Host`, `1`, `B`]
 ];
 
-let x
+let ownedskins = [];
 
-function pull() {
-    let e1 = document.getElementById("sel02").value
-
-    if (e1 == 'a') {
-        x = Math.floor(Math.random() * essence001.length)
-        if (essence001 == 0) {
-            alert('You have all the skins')
-        } else {
-        document.getElementById("skinstorage").innerHTML += essence001[x] + '<br>'
-        essence001.splice(x, 1)
-        }
-        console.log(x)
-    }
-
-    if (e1 == 'b') {
-        x = Math.floor(Math.random() * essence002.length)
-        if (essence002 == 0) {
-            alert('You have all the skins')
-        } else {
-            document.getElementById("skinstorage").innerHTML += essence002[x] + '<br>'
-            essence002.splice(x, 1)
-        }
-    }
+function skinivn() {
+    document.getElementById("skinstorage").innerHTML = ownedskins
 }
 
-function test() {
-    for (let i = 0; i < 100; i++){
-        y++
-        z = 20
-        essence001.push([y, 20])
+function pull() {
+    let essencenum = document.getElementById("sel02").value
+
+    if (essencenum == 'a') {
+        x = Math.floor(Math.random() * essence001.length)
+
+        let found = false;
+        for (let i = 0; i < ownedskins.length; i++) {
+            if(essence001[x][0] == ownedskins[i][0]) {
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+            document.getElementById("skinstorage").innerHTML = 'You got shards'
+        } else {
+            ownedskins.push(essence001[x])
+            document.getElementById("skinstorage").innerHTML = 'You unlocked ' + essence001[x][0]
+        }
     }
-    console.log(essence001)
+
+    if (essencenum == 'b') {
+        alert('nah')
+    }
 }
