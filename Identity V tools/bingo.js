@@ -28,6 +28,7 @@ function scramble(){
     for (let i = 0; i < 17; i++) {
         x = Math.floor(Math.random() * temp.length)
         document.getElementById('card_' + id).innerHTML = temp[x]
+        document.getElementById('card_' + id).style.backgroundColor = 'rgba(20, 14, 82, 0.582)'
         temp.splice(x, 1)
         id++
     }
