@@ -67,7 +67,7 @@ let hunter = [
     `Nightmare`,
     `Clerk`,
     `Hermit`,
-    `Night watch`
+    `night watch`
 ];
 
 let trait = [
@@ -276,4 +276,4 @@ function randomH4() {
     randomH3()
 
     document.getElementById('rndm_result').innerHTML = '<h2>' + random + '</h2> <h3>' + random2 + '</h3><h4>' + sum + '</h4>'
-} 
+}
