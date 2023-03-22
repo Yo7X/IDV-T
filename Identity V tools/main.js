@@ -42,6 +42,8 @@ function bt2() {
     document.getElementById('pg006').style.display = 'none'
 
     document.getElementById('default').style.display = 'none'
+
+    document.getElementById('pg002').style.height = winy - 100 + 'px'
 }
 
 function bt3() {
@@ -60,6 +62,8 @@ function bt3() {
     document.getElementById('pg006').style.display = 'none'
 
     document.getElementById('default').style.display = 'none'
+
+    trivstart()
 }
 
 function bt4() {
@@ -78,6 +82,8 @@ function bt4() {
     document.getElementById('pg006').style.display = 'none'
 
     document.getElementById('default').style.display = 'none'
+
+    cng()
 }
 
 function bt5() {
@@ -96,6 +102,8 @@ function bt5() {
     document.getElementById('pg006').style.display = 'none'
 
     document.getElementById('default').style.display = 'none'
+
+    scramble()
 }
 
 function bt6() {
