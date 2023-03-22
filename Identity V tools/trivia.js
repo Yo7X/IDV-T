@@ -1,5 +1,3 @@
-//Why is this not updating
-
 let ar = [
     ['What character got the first SS tier skin?', 'Skins', 'Perfumer', 'Priestess', 'Coordinator', 'Perfumer'],
     ['When was the golbal version of idv released', 'General', 'July 2018', 'May 2020', 'March 2017', 'July 2018'],
@@ -11,17 +9,22 @@ let ar = [
     ['When prospector skill "Attraction" is activated how much faster does he run?', 'Game mechanics', '10%', '20%', '50%', '50%'],
     ['How many 4 sided dice can be carried over from one season to another?', 'General', 'no limit', '100', '1000', '100'],
     ['The "Im stuck" ping is also used to imforme your team that you are', 'Vocabulary', 'lagging', 'In a bod kitting spot', 'Need suport urgently', 'lagging'],
-    ['Have you subscribed to yo7 on YouTube', 'self promotion', '7', '7', '7', '7'],
     ['What is the max amount of persona points you can spend per page?', 'General', '100', '120', '150', '120'],
+    //['question', 'catagory', 'answer1', 'answer2', 'answer3', 'right answer'],
 ];
+
+//catagorys
+//Skins
+//Vocabulary
+//General
+//Game mechanics
 
 x = 0
 win = 0
 amount = 0
 arraynum = ar.length
 
-function srt() {
-setTimeout(() => {
+function trivstart() {
     x = Math.floor(Math.random() * arraynum)
 
     document.getElementById('question').innerHTML = ar[x][0]
@@ -29,7 +32,6 @@ setTimeout(() => {
     document.getElementById('an01').innerHTML = ar[x][2]
     document.getElementById('an02').innerHTML = ar[x][3]
     document.getElementById('an03').innerHTML = ar[x][4]
-}, 1000);
 }
 
 function reset() {
