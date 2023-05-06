@@ -17,6 +17,23 @@ a, a:visited, a:active {
     text-shadow: 2px 2px 8px #ffffff;
 }
 
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(193, 138, 255); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(46, 0, 107); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a661ff; 
+}
+
 table, th, td, caption{
     border: 1px solid white;
     border-collapse: collapse;
@@ -25,7 +42,6 @@ table, th, td, caption{
 }
 
 .button {
-    position: fixed;
     color:white;
     font-size: 35px;
     font-family: cursive;
@@ -37,4 +53,16 @@ table, th, td, caption{
     height: 70px;
     width: 200px;
     background-color: rgba(20, 14, 82, 0.582);
+}
+
+.hovering {
+    background-color: rgba(143, 35, 175, 0.788);
+}
+
+.displayed {
+    display: block !important;
+}
+
+.hidden {
+    display: none;
 }
