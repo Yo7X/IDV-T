@@ -10,6 +10,8 @@ let ar = [
     ['How many 4 sided dice can be carried over from one season to another?', 'General', 'no limit', '100', '1000', '100'],
     ['The "Im stuck" ping is also used to imforme your team that you are', 'Vocabulary', 'lagging', 'In a bod kitting spot', 'Need suport urgently', 'lagging'],
     ['What is the max amount of persona points you can spend per page?', 'General', '100', '120', '150', '120'],
+    ['What is the map with the most character spawn groups', 'obscure', 'Lakeside village', 'Moonlit river park', 'Leos memory', 'Leos memory'],
+    //['question', 'catagory', 'answer1', 'answer2', 'answer3', 'right answer'],
     //['question', 'catagory', 'answer1', 'answer2', 'answer3', 'right answer'],
 ];
 
@@ -18,83 +20,78 @@ let ar = [
 //Vocabulary
 //General
 //Game mechanics
+//obscure
 
-x = 0
 win = 0
 amount = 0
-arraynum = ar.length
 
-function trivstart() {
-    x = Math.floor(Math.random() * arraynum)
+x = Math.floor(Math.random() * ar.length)
+answer = ar[x][5]
 
-    document.getElementById('question').innerHTML = ar[x][0]
-    document.getElementById('cat').innerHTML = ar[x][1]
-    document.getElementById('an01').innerHTML = ar[x][2]
-    document.getElementById('an02').innerHTML = ar[x][3]
-    document.getElementById('an03').innerHTML = ar[x][4]
-}
+document.getElementById('question').innerHTML = ar[x][0]
+document.getElementById('cat').innerHTML = ar[x][1]
+document.getElementById('ta1').innerHTML = ar[x][2]
+document.getElementById('ta2').innerHTML = ar[x][3]
+document.getElementById('ta3').innerHTML = ar[x][4]
+
+ar.splice(x,1)
 
 function reset() {
-    if (arraynum === 0) {
+    if (ar.length == 0) {
         document.getElementById('question').innerHTML = 'No more available questions'
         document.getElementById('cat').innerHTML = 'Thanks for playing'
-        document.getElementById('an01').innerHTML = '7'
-        document.getElementById('an02').innerHTML = '7'
-        document.getElementById('an03').innerHTML = '7'
+        document.getElementById('ta1').style.display = 'none'
+        document.getElementById('ta2').style.display = 'none'
+        document.getElementById('ta3').style.display = 'none'
     }
-        x = Math.floor(Math.random() * arraynum)
     
-        document.getElementById('question').innerHTML = ar[x][0]
-        document.getElementById('cat').innerHTML = ar[x][1]
-        document.getElementById('an01').innerHTML = ar[x][2]
-        document.getElementById('an02').innerHTML = ar[x][3]
-        document.getElementById('an03').innerHTML = ar[x][4]
-    }
+    x = Math.floor(Math.random() * ar.length)
+    answer = ar[x][5]
+    
+    document.getElementById('question').innerHTML = ar[x][0]
+    document.getElementById('cat').innerHTML = ar[x][1]
+    document.getElementById('ta1').innerHTML = ar[x][2]
+    document.getElementById('ta2').innerHTML = ar[x][3]
+    document.getElementById('ta3').innerHTML = ar[x][4]
+
+    ar.splice(x,1)
+}
 
 function ans01() {
-    a = document.getElementById('an01').innerHTML
-    b = ar[x][5]
+    a = document.getElementById('ta1').innerHTML
 
-    if (a === b) {
+    if (a == answer) {
         win++
         amount++
     } else {
         amount++
     }
-    ar.splice(x,1)
-    arraynum--
     document.getElementById('wl').innerHTML = 'Correct ' + win + '/' + amount
     reset()
 };
 
 function ans02() {
-    a = document.getElementById('an02').innerHTML
-    b = ar[x][5]
+    a = document.getElementById('ta2').innerHTML
 
-    if (a === b) {
+    if (a == answer) {
         win++
         amount++
     } else {
         amount++
     }
-    ar.splice(x,1)
-    arraynum--
     document.getElementById('wl').innerHTML = 'Correct ' + win + '/' + amount
     reset()
 };
 
 function ans03() {
-    a = document.getElementById('an03').innerHTML
-    b = ar[x][5]
+    a = document.getElementById('ta3').innerHTML
 
-    if (a === b) {
+    if (a == answer) {
         win++
         amount++
     } else {
         amount++
     }
-    ar.splice(x,1)
-    arraynum--
     document.getElementById('wl').innerHTML = 'Correct ' + win + '/' + amount
     reset()
 };
