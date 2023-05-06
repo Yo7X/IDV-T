@@ -20,6 +20,8 @@ spaces = [
 
 temp = [];
 
+scramble()
+
 function scramble(){
     id = 1
 
