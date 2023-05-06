@@ -4,57 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="yo7">
-    <meta name="description" content="Cool tools for idv">
-    <title>Identity V tools</title>
+    <title>Idv tools</title>
 
-    <link rel="stylesheet" href="main.css" type="text/css">
-    <script src="main.js"></script>
-    <script src="randomizer.js"></script>
-    <script src="tts.js"></script>
-    <script src="trivia.js"></script>
-    <script src="bingo.js"></script>
-    <script src="skin.js"></script>
-
-    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <link rel='stylesheet' href="main.css" type="text/css">
 </head>
+<body onload="size(); showpage(mainpage);" onresize="size()">
+    <div id="body decor" style="background-color: rgba(92, 30, 173, 0.185); width: 100px; height: 100px; position: absolute; top: 0px; left: 0px; z-index: -100000;"></div>
 
-<!--
-    Copy to nest version
+    <div id="sidebar" style="background-color: rgb(92, 30, 173); width: 270px; border: 2px solid white; border-radius: 2%; height: 100px; position: absolute; top: 15px; left: 15px; overflow-y: scroll; direction: rtl;">
+        <center>
+            <p></p>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{showpage(mainpage)}">Main page</button>
+            <p></p>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{showpage(tierlist)}" style="font-size: 25px;">Community tier list</button>
+            <p></p>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{showpage(bingo)}">Bingo card</button>
+            <p></p>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 30px;" onclick="{showpage(random)}">Randomizers</button>
+            <p></p>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{showpage(trivia)}">Trivia</button>
+            <p></p>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 30px;" onclick="{showpage(more)}">More by me</button>
+            <p></p>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Placeholder</button>
+            <p></p>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Placeholder</button>
+            <p></p>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Placeholder</button>
+            <p></p>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Placeholder</button>
+            <p></p>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Placeholder</button>
+        </center>
+    </div>
+    
+    <div id="mainpage" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+        <center>
+        <h1>Identity V tools</h1>
+        <h3>By yo7</h3>
 
-    -Index
-    -randomizer
--->
+        <p style="font-size: 30px;">
+            <b>Please include a link to this site if you use these tools in a video/stream</b> <br><br>
 
-<body onload="{size(); srt(); cng(); scramble();}" onresize="{size()}">
-    <div id="maindeco01" style="height: 1000px; width: 235px; background-color: rgba(117, 62, 189, 0.774); top: 0px; left: 0px; border: 2px solid white; position: absolute; z-index: 1;">
-        <button id="bt001" onclick="{bt1()}" class="button" style="font-size: 30px; top: 15px; left: 15px;">Randomizers</button>
-        <button id="bt002" onclick="{bt2()}" class="button" style="font-size: 20px; top: 105px; left: 15px;">community tier list</button>
-        <button id="bt003" onclick="{bt3()}" class="button" style="top: 195px; left: 15px;">Trivia</button>
-        <button id="bt004" onclick="{bt4()}" class="button" style="top: 285px; left: 15px;">TTS</button>
-        <button id="bt005" onclick="{bt5()}" class="button" style="top: 375px; left: 15px;">Bingo</button>
-        <button id="bt006" onclick="{bt6()}" class="button" style="font-size: 30px; top: 460px; left: 15px;">Essence pull</button>
+            If you find these tools helfull I also have a <a href="https://discord.com/api/oauth2/authorize?client_id=970014291413565520&permissions=2147613712&scope=applications.commands%20bot" target="_blank">discord bot</a> centered around idv <br><br>
+            
+            If you want to give feedback, share ideas, or find any bugs <br>
+            join my <a href="https://discord.gg/WqvsKqURPr" target="_blank">discord server</a> ill see what I can do
+        </p>
+        </center>
     </div>
 
-    <div id="maindeco02" style="height: 1000px; width: 2000px; background-color: rgba(20, 14, 82, 0.911); top: 0px; left: 235px; position: absolute;">
+    <div id="tierlist" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
         <center>
-        <div id="default" style="display: block; ">
-            <h1>Identity V tools</h1>
-            <h3><a href="https://www.youtube.com/channel/UCnHHxFU-nYnuKMC7TKnhXqA" target="_blank">By yo7</a></h3>
-            <p title="7">
-                Please include a link to this site if you use these tools in a video/stream <br> <br>
-                If you find these tools helfull I also have a <a target="_blank" href="https://shorturl.at/vzQX7 ">discord bot</a> centered around idv <br><br>
-                If you want to give feedback, share ideas, or find any bugs <br> you can also join my <a target="_blank" href="https://discord.gg/WqvsKqURPr">discord server</a> ill see what I can do
-                <br><br><br><br>
-                <h3><p>Web games for long queue times</p></h3>
-                <a href="Idle-V.html" target="_blank">Idle V</a>
-                
-            </p>
-        </div>
+        <h1>Community tier list</h1>
 
-        <div id="pg001" style="display: none;">
-            <h1>IDV randomizers</h1>
+        <div style="background-color: gold; overflow: hidden; margin-left: 70px; margin-right: 70px; height: fit-content;">
+            <img src="img/S.png" width="160px" height="100px" align="left" style="background-color: rgb(197, 168, 0);">
+        </div>
+        <br>
+        <div style="background-color: rgb(197, 0, 197); overflow: hidden; margin-left: 70px; margin-right: 70px; height: fit-content;">
+            <img src="img/A.png" width="160px" height="100px" align="left" style="background-color: purple">
+        </div>
+        <br>
+        <div style="background-color: rgb(0, 180, 0); overflow: hidden; margin-left: 70px; margin-right: 70px; height: fit-content;">
+            <img src="img/B.png" width="160px" height="100px" align="left" style="background-color: green;">
+        </div>
+        <br>
+        <div style="background-color: cyan; overflow: hidden; margin-left: 70px; margin-right: 70px; height: fit-content;">
+            <img src="img/C.png" width="160px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
+        </div>
+        <br>
+        <div style="background-color: red; overflow: hidden; margin-left: 70px; margin-right: 70px; height: fit-content;">
+            <img src="img/D.png" width="160px" height="100px" align="left" style="background-color: rgb(189, 0, 0)">
+        </div>
+        <br>
+        <div style="background-color: grey; overflow: hidden; margin-left: 70px; margin-right: 70px; height: fit-content;">
+            <img src="img/Unranked.png" width="160px" height="100px" align="left" style="background-color: rgb(80, 80, 80)">
+        </div>
+        </center>
+    </div>
+
+    <div id="bingo" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+        <center>
+        <table style="font-size: 30px; user-select: none; margin-top: 50px;">
+            <caption>Identity V bingo</caption>
+            <tr>
+                <td id="card_1" width="15px" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_1').style.backgroundColor === 'green') {document.getElementById('card_1').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_1').style.backgroundColor = 'green'}">zz</td>
+                <td id="card_2" width="15px" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_2').style.backgroundColor === 'green') {document.getElementById('card_2').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_2').style.backgroundColor = 'green'}">zz</td>
+                <td id="card_3" width="15px" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_3').style.backgroundColor === 'green') {document.getElementById('card_3').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_3').style.backgroundColor = 'green'}">zz</td>
+                <td id="card_4" width="15px" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_4').style.backgroundColor === 'green') {document.getElementById('card_4').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_4').style.backgroundColor = 'green'}">zz</td>
+            </tr>
+            <tr>
+                <td id="card_5" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_5').style.backgroundColor === 'green') {document.getElementById('card_5').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_5').style.backgroundColor = 'green'}">zz</td>
+                <td id="card_6" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_6').style.backgroundColor === 'green') {document.getElementById('card_6').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_6').style.backgroundColor = 'green'}">zz</td>
+                <td id="card_7" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_7').style.backgroundColor === 'green') {document.getElementById('card_7').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_7').style.backgroundColor = 'green'}">zz</td>
+                <td id="card_8" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_8').style.backgroundColor === 'green') {document.getElementById('card_8').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_8').style.backgroundColor = 'green'}">zz</td>
+            </tr>
+            <tr>
+                <td id="card_9" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_9').style.backgroundColor === 'green') {document.getElementById('card_9').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_9').style.backgroundColor = 'green'}">zz</td>
+                <td id="card_10" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_10').style.backgroundColor === 'green') {document.getElementById('card_10').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_10').style.backgroundColor = 'green'}">zz</td>
+                <td id="card_11" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_11').style.backgroundColor === 'green') {document.getElementById('card_11').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_11').style.backgroundColor = 'green'}">zz</td>
+                <td id="card_12" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_12').style.backgroundColor === 'green') {document.getElementById('card_12').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_12').style.backgroundColor = 'green'}">zz</td>
+            </tr>
+            <tr>
+                <td id="card_13" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_13').style.backgroundColor === 'green') {document.getElementById('card_13').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_13').style.backgroundColor = 'green'}">zz</td>
+                <td id="card_14" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_14').style.backgroundColor === 'green') {document.getElementById('card_14').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_14').style.backgroundColor = 'green'}">zz</td>
+                <td id="card_15" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_15').style.backgroundColor === 'green') {document.getElementById('card_15').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_15').style.backgroundColor = 'green'}">zz</td>
+                <td id="card_16" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_16').style.backgroundColor === 'green') {document.getElementById('card_16').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_16').style.backgroundColor = 'green'}">zz</td>
+            </tr>
+        </table>
+        <br><br>
+        <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{scramble()}">Scramble</button>
+        <br><br><br><br>
+        <input id="typespace" class="button" onfocus="{highlight(this)}" onblur="{darken(this)}" style="width: 350px; height: 50px;" type="text" value="" placeholder="Input your own space"> 
+        <br><br>
+        <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{addspace()}">Add</button> 
+        <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{removespace()}">Remove</button>
+    </div>
+        </center>
+    </div>
+
+    <div id="random" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+        <center>
+        <h1>Randomizers</h1>
+        <br><br>
             <button onclick="{randomS1()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651);">Survivor</button>
             <button onclick="{randomS2()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Survivor team</button>
             <button onclick="{randomS3()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 20px;">Survivor persona</button>
@@ -65,135 +138,88 @@
             <button onclick="{randomH1()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651);">Hunter</button>
             <button onclick="{randomH2()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Hunter trait</button>
             <button onclick="{randomH3()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Hunter persona</button>
-            <button onclick="{randomH4()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Full hunter set</button>
+            <button onclick="{pers()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Better persona</button>
 
         <br><br>
-            <div style="font-size: 30px; overflow-y: scroll; height: 600px;" id="rndm_result"></div><br>
-        </div>
+            <div style="font-size: 30px; height: 600px;" id="rndm_result"></div><br>
+        </center>
+    </div>
 
-        <div id="pg002" style="display: none; overflow-y: scroll; height: 600px">
-            <h1>Community voted tier list</h1>
-            <h5>Im still building the vote system</h5>
-            <div style="background-color: gold; overflow: hidden; margin-left: 70px; margin-right: 300px; height: fit-content;">
-                <img src="img/S.png" width="160px" height="100px" align="left" style="background-color: rgb(197, 168, 0);">
-            </div>
-            <br>
-            <div style="background-color: rgb(197, 0, 197); overflow: hidden; margin-left: 70px; margin-right: 300px; height: fit-content;">
-                <img src="img/A.png" width="160px" height="100px" align="left" style="background-color: purple">
-            </div>
-            <br>
-            <div style="background-color: rgb(0, 180, 0); overflow: hidden; margin-left: 70px; margin-right: 300px; height: fit-content;">
-                <img src="img/B.png" width="160px" height="100px" align="left" style="background-color: green;">
-            </div>
-            <br>
-            <div style="background-color: cyan; overflow: hidden; margin-left: 70px; margin-right: 300px; height: fit-content;">
-                <img src="img/C.png" width="160px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
-            </div>
-            <br>
-            <div style="background-color: red; overflow: hidden; margin-left: 70px; margin-right: 300px; height: fit-content;">
-                <img src="img/D.png" width="160px" height="100px" align="left" style="background-color: rgb(189, 0, 0)">
-            </div>
-            <br>
-            <div style="background-color: grey; overflow: hidden; margin-left: 70px; margin-right: 300px; height: fit-content;">
-                <img src="img/Unranked.png" width="160px" height="100px" align="left" style="background-color: rgb(80, 80, 80)">
-            </div>
-        </div>
-
-
-        <div id="pg003" style="display: none;">
-            <h1>Identity V trivia</h1>
+    <div id="trivia" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+        <center>
+        <h1>Trivia</h1>
+        <h1>Identity V trivia</h1>
             <div id="wl" style="font-size: 50px;">Correct: N/A</div><br>
             <hr>
             <br>
             <div id="question" style="font-size: 33px;">Question</div><br>
             <div id="cat" style="font-size: 33px;">Category</div><br>
-            <button id="an01" onclick="{ans01()}" class="button" style="position:relative; height: fit-content; background-color: rgb(129, 15, 139);">Answer01</button>
-            <button id="an02" onclick="{ans02()}" class="button" style="position:relative; height: fit-content; background-color: rgb(129, 15, 139);">Answer02</button>
-            <button id="an03" onclick="{ans03()}" class="button" style="position:relative; height: fit-content; background-color: rgb(129, 15, 139);">Answer03</button>
-        </div>
-
-        <div id="pg004" style="display: none;">
-            <h2>TTS</h2>
-    
-    <input onblur="{cng()}" type=text id="myText01" value="Change me" placeholder="Text to read"><br><br>
-
-    <details>
-        <summary>Extra options</summary>
-
-        <input type=text id="myText02" value="" placeholder="Pitch">
-        <input type=text id="myText03" value="" placeholder="Rate">
-        <input type=text id="myText04" value="" placeholder="Volume">
-    </details>
-    
-    <br><br>
-
-    <select id="sel01">
-        <option value="a">US English Female</option> 
-        <option value="b">US English Male</option> 
-        <option value="c">UK English Female</option> 
-        <option value="d">UK English Male</option> 
-    </select>
-
-    <br><br>
-    
-    <div id="google_translate_element">Placeholder</div>
-
-    <br>
-
-    <button class="button" style="background-color: rgba(35, 26, 129, 0.582); position:relative;" onclick="{spk()}">Read</button>
-        </div>
-        <div id="pg005" style="display: none;">
-            <table style="font-size: 30px; user-select: none; margin-top: 50px;">
-                <caption>Identity V bingo</caption>
-                <tr>
-                    <td id="card_1" width="15px" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_1').style.backgroundColor === 'green') {document.getElementById('card_1').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_1').style.backgroundColor = 'green'}">zz</td>
-                    <td id="card_2" width="15px" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_2').style.backgroundColor === 'green') {document.getElementById('card_2').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_2').style.backgroundColor = 'green'}">zz</td>
-                    <td id="card_3" width="15px" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_3').style.backgroundColor === 'green') {document.getElementById('card_3').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_3').style.backgroundColor = 'green'}">zz</td>
-                    <td id="card_4" width="15px" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_4').style.backgroundColor === 'green') {document.getElementById('card_4').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_4').style.backgroundColor = 'green'}">zz</td>
-                </tr>
-                <tr>
-                    <td id="card_5" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_5').style.backgroundColor === 'green') {document.getElementById('card_5').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_5').style.backgroundColor = 'green'}">zz</td>
-                    <td id="card_6" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_6').style.backgroundColor === 'green') {document.getElementById('card_6').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_6').style.backgroundColor = 'green'}">zz</td>
-                    <td id="card_7" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_7').style.backgroundColor === 'green') {document.getElementById('card_7').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_7').style.backgroundColor = 'green'}">zz</td>
-                    <td id="card_8" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_8').style.backgroundColor === 'green') {document.getElementById('card_8').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_8').style.backgroundColor = 'green'}">zz</td>
-                </tr>
-                <tr>
-                    <td id="card_9" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_9').style.backgroundColor === 'green') {document.getElementById('card_9').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_9').style.backgroundColor = 'green'}">zz</td>
-                    <td id="card_10" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_10').style.backgroundColor === 'green') {document.getElementById('card_10').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_10').style.backgroundColor = 'green'}">zz</td>
-                    <td id="card_11" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_11').style.backgroundColor === 'green') {document.getElementById('card_11').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_11').style.backgroundColor = 'green'}">zz</td>
-                    <td id="card_12" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_12').style.backgroundColor === 'green') {document.getElementById('card_12').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_12').style.backgroundColor = 'green'}">zz</td>
-                </tr>
-                <tr>
-                    <td id="card_13" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_13').style.backgroundColor === 'green') {document.getElementById('card_13').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_13').style.backgroundColor = 'green'}">zz</td>
-                    <td id="card_14" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_14').style.backgroundColor === 'green') {document.getElementById('card_14').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_14').style.backgroundColor = 'green'}">zz</td>
-                    <td id="card_15" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_15').style.backgroundColor === 'green') {document.getElementById('card_15').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_15').style.backgroundColor = 'green'}">zz</td>
-                    <td id="card_16" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_16').style.backgroundColor === 'green') {document.getElementById('card_16').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_16').style.backgroundColor = 'green'}">zz</td>
-                </tr>
-            </table>
-            <br><br>
-            <button style="background-color: rgba(35, 26, 129, 0.582); position:relative;" class="button" onclick="{scramble()}">Scramble</button>
-            <br><br>
-            <input id="typespace" type="text" value="" placeholder="Input your own space"> <button onclick="{addspace()}">Add</button> <button onclick="{removespace()}">Remove</button>
-        </div>
-        <div id="pg006" style="display: none;">
-        <h1 title="Eggie is the best idv player in the world">Essence pull</h1>
-        <h5>This is still a work in progress</h5>
-
-        <select id="sel02">
-            <option value="a" selected="">Essence 1</option> 
-            <option value="b">Essence 2</option> 
-            <option value="c">Essence 3</option> 
-            <option value="d">Essence 4</option> 
-        </select>
-
-        <br><br><br>
-
-        <img width="100px" height="100px" style="background-color: red;" alt="image failed to load" src="" onclick="pull()"> <br><br>
-
-        <div id="skinstorage"></div>  <br><br>
-        <buttton class="button" onclick="skinivn()" style="position: relative; padding: 2px;">View inventory</buttton>
+            <button id="ta1" onclick="{ans01()}" class="button" style="position:relative; height: fit-content; background-color: rgb(129, 15, 139); display: inline;">Answer01</button>
+            <button id="ta2" onclick="{ans02()}" class="button" style="position:relative; height: fit-content; background-color: rgb(129, 15, 139); display: inline;">Answer02</button>
+            <button id="ta3" onclick="{ans03()}" class="button" style="position:relative; height: fit-content; background-color: rgb(129, 15, 139); display: inline;">Answer03</button>
+        </center>
     </div>
-    </center>
+
+    <div id="more" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+        <center>
+        <h1>More from yo7</h1>
+        <h3>Basicaly just a list of my other projects and socials</h3>
+
+        <p style="font-size: 30px;">
+        <a href="https://www.youtube.com/channel/UCnHHxFU-nYnuKMC7TKnhXqA" target="_blank">YouTube</a><br>
+        <a href="https://github.com/Yo7X" target="_blank">Github</a><br>
+        <a href="https://discord.com/api/oauth2/authorize?client_id=970014291413565520&permissions=2147613712&scope=applications.commands%20bot" target="_blank">Identity V info invite</a><br>
+        <a href="" target="_blank"></a>
+        </p>
+        </center>
     </div>
+
+    <script>
+        let winx
+        let winy
+
+        function size() {
+        winx = window.innerWidth
+        winy = window.innerHeight
+
+        console.log(winx, winy)
+
+        document.getElementById('body decor').style.width = winx + 'px'
+        document.getElementById('body decor').style.height = winy + 'px'
+
+        document.getElementById('sidebar').style.height = winy - 35 + 'px'
+        }
+
+        function highlight(obj) {
+            obj.classList.add("hovering")
+        }
+
+        function darken(obj) {
+            obj.classList.remove("hovering");
+        }
+
+        function showpage(obj) {
+            winx = window.innerWidth
+            winy = window.innerHeight
+
+            const allElements = document.querySelectorAll('*');
+
+            allElements.forEach((element) => {
+                element.classList.remove('displayed');
+            });
+
+            x = parseInt(document.getElementById('sidebar').style.width)
+            console.log(x)
+
+            obj.classList.add("displayed")
+            obj.style.left = x + 40 + 'px'
+
+            obj.style.width = winx - 330 + 'px'
+            obj.style.height = winy - 35 + 'px'
+        }
+    </script>
+    <script src="trivia.js"></script>
+    <script src="bingo.js"></script>
+    <script src="randomizer.js"></script>
 </body>
 </html>
