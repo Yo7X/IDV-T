@@ -58,20 +58,43 @@
         <center>
         <h1>Community tier list</h1>
 
+        <h3 id="tempnote" style="display: block;">Vote for a characters tier by using the /vote command in my <a href="https://discord.com/api/oauth2/authorize?client_id=970014291413565520&permissions=2147613712&scope=applications.commands%20bot" target="_blank">discord bot</a>
+        <br> Votes are counted roughly once per week. <br><br> Please note this is in really early developement so expect a bunch of bugs </h3>
+
+        <button id="tempnote2" style="display: block;" onclick="{des()}">Destroy note</button>
+        <script>
+            function des() {
+                document.getElementById('tempnote').style.display = 'none'
+                document.getElementById('tempnote2').style.display = 'none'
+            }
+        </script>
+
+        <br>
+
         <div style="background-color: gold; overflow: hidden; margin-left: 70px; margin-right: 70px; height: fit-content;">
             <img src="img/S.png" width="160px" height="100px" align="left" style="background-color: rgb(197, 168, 0);">
+
+            <img src="Survivor-pics/Acrobat.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
         </div>
         <br>
         <div style="background-color: rgb(197, 0, 197); overflow: hidden; margin-left: 70px; margin-right: 70px; height: fit-content;">
             <img src="img/A.png" width="160px" height="100px" align="left" style="background-color: purple">
+
+            <img src="Survivor-pics/Prospector.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
+            <img src="Survivor-pics/Geisha.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
         </div>
         <br>
         <div style="background-color: rgb(0, 180, 0); overflow: hidden; margin-left: 70px; margin-right: 70px; height: fit-content;">
             <img src="img/B.png" width="160px" height="100px" align="left" style="background-color: green;">
+
+            <img src="Survivor-pics/Cowboy.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
+            <img src="Survivor-pics/Doctor.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
         </div>
         <br>
         <div style="background-color: cyan; overflow: hidden; margin-left: 70px; margin-right: 70px; height: fit-content;">
             <img src="img/C.png" width="160px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
+
+            <img src="Survivor-pics/Lucky_guy.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
         </div>
         <br>
         <div style="background-color: red; overflow: hidden; margin-left: 70px; margin-right: 70px; height: fit-content;">
@@ -128,17 +151,17 @@
         <center>
         <h1>Randomizers</h1>
         <br><br>
-            <button onclick="{randomS1()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651);">Survivor</button>
-            <button onclick="{randomS2()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Survivor team</button>
-            <button onclick="{randomS3()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 20px;">Survivor persona</button>
-            <button onclick="{randomS4()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 20px;">Full survivor set</button>
+            <button onclick="{randomS1()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Survivor</button>
+            <button onclick="{randomS2()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 25px;">Survivor team</button>
+            <button onclick="{randomS3()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 20px;">Survivor persona</button>
+            <button onclick="{randomS4()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 20px;">Full survivor set</button>
 
             <br><br>
 
-            <button onclick="{randomH1()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651);">Hunter</button>
-            <button onclick="{randomH2()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Hunter trait</button>
-            <button onclick="{randomH3()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Hunter persona</button>
-            <button onclick="{randomH4()}" class="button" style="position: relative; background-color: rgba(113, 58, 185, 0.651); font-size: 25px;">Full hunter set</button>
+            <button onclick="{randomH1()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Hunter</button>
+            <button onclick="{randomH2()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 25px;">Hunter trait</button>
+            <button onclick="{randomH3()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 25px;">Hunter persona</button>
+            <button onclick="{randomH4()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 25px;">Full hunter set</button>
 
         <br><br>
             <div style="font-size: 30px; height: 600px;" id="rndm_result"></div><br>
