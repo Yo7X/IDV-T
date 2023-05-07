@@ -38,7 +38,8 @@ let survivors = [
     `Little Girl`,
     `Weeping Clown`,
     `Professor`,
-    `Antiquarian`
+    `Antiquarian`,
+    `Journalist`
 ];
 
 let hunter = [
