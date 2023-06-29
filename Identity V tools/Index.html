@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idv tools</title>
+    <title>Identtiy V tools</title>
+
+    <link rel="icon" href="img/Icon.png" type="title/x-icon">
 
     <link rel='stylesheet' href="main.css" type="text/css">
 </head>
@@ -24,9 +26,9 @@
             <p></p>
             <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{showpage(trivia)}">Trivia</button>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 30px;" onclick="{showpage(more)}">More by me</button>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 30px;" onclick="{showpage(timing)}">Skill timings</button>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Placeholder</button>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 30px;" onclick="{showpage(more)}">More by me</button>
             <p></p>
             <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Placeholder</button>
             <p></p>
@@ -45,6 +47,8 @@
 
         <p style="font-size: 30px;">
             <b>Please include a link to this site if you use these tools in a video/stream</b> <br><br>
+
+            <!--<a href="img/Icon.png" download="">ss</a>-->
 
             If you find these tools helfull I also have a <a href="https://discord.com/api/oauth2/authorize?client_id=970014291413565520&permissions=2147613712&scope=applications.commands%20bot" target="_blank">discord bot</a> centered around idv <br><br>
             
@@ -119,7 +123,7 @@
             <img src="tierlist/feaster.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
             <img src="tierlist/guard.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
             <img src="tierlist/wheel.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
-            <img src="tierlist/violinist.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
+            <img src="tierlist/violinist.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">  
             <img src="tierlist/disiple.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);">
         </div>
         <br>
@@ -244,6 +248,21 @@
         </center>
     </div>
 
+    <div id="timing" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+        <center>
+        <h1>Skill time counter</h1>
+        <button id="timeGameStart" class="button" onclick="timeGameStart()">Game start</button> <br>
+        <button id="timeReset" class="button" onclick="timeReset()">Reset</button> <br><br>
+        <button id="timeBlink" class="button" onclick="timeBlink()">Blink</button> <br>
+        <button id="timeTeleport" class="button" style="font-size: 30px;" onclick="timeTeleport()">Teleport</button> <br>
+        <button id="timePatroler" class="button" style="font-size: 30px;" onclick="timePatroler()">Patroler</button> <br>
+        <button id="timeExcitement" class="button" style="font-size: 25px;" onclick="timeExcitement()">Excitement</button> <br>
+        <br>
+        <button id="" class="button" onclick="">BQ mirror</button> <br>
+        <button id="" class="button" onclick="">Ann cats</button> <br>
+        </center>
+    </div>
+
     <div id="more" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
         <center>
         <h1>More from yo7</h1>
@@ -305,5 +324,6 @@
     <script src="trivia.js"></script>
     <script src="bingo.js"></script>
     <script src="randomizer.js"></script>
+    <script src="timing.js"></script>
 </body>
 </html>
