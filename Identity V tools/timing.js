@@ -1,5 +1,5 @@
 let clock
- 
+
 let blink
 let blinkTick = false
 
