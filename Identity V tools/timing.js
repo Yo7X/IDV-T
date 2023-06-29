@@ -12,6 +12,9 @@ let patrolerTick = false
 let excitement
 let excitementTick = false
 
+let mirror
+let mirrorTick = false
+
 function timeReset() {
     blinkTick = false
     document.getElementById('timeBlink').innerHTML = 'Blink'
@@ -33,7 +36,7 @@ function timeGameStart() {
     document.getElementById('timeBlink').innerHTML = 'Blink ' + blink
 
 
-    teleport = 40
+    teleport = 45
     teleportTick = true
     teleport--
     document.getElementById('timeTeleport').innerHTML = 'Teleport ' + teleport
@@ -67,11 +70,11 @@ function timeTeleport() {
 }
 
 function timePatroler() {
-    patroler = 100
+    patroler = 90
     patrolerTick = true
 
     patroler--
-    document.getElementById('timePatroler').innerHTML = 'Patroler ' + patroler
+    document.getElementById('timePatroler').innerHTML = 'Patroller ' + patroler
 }
 
 function timeExcitement() {
@@ -80,6 +83,15 @@ function timeExcitement() {
 
     excitement--
     document.getElementById('timeExcitement').innerHTML = 'Excitement ' + excitement
+}
+
+function timeMirror() {
+    mirror = 28
+    mirrorTick = true
+
+    mirror--
+    document.getElementById('timeMirror').innerHTML = 'Mirror (Active) ' + mirror
+    document.getElementById('timeMirror').style.width = '370px'
 }
 
 
@@ -107,10 +119,10 @@ setInterval( function() {
 
     if (patrolerTick == true) {
         patroler--
-        document.getElementById('timePatroler').innerHTML = 'Patroler ' + patroler
+        document.getElementById('timePatroler').innerHTML = 'Patroller ' + patroler
         if (patroler == 0) {
             patrolerTick = false
-            document.getElementById('timePatroler').innerHTML = 'Patroler'
+            document.getElementById('timePatroler').innerHTML = 'Patroller'
         }
     }
 
@@ -120,6 +132,20 @@ setInterval( function() {
         if (excitement == 0) {
             excitementTick = false
             document.getElementById('timeExcitement').innerHTML = 'Excitement'
+        }
+    }
+
+    if (mirrorTick == true) {
+        mirror--
+        if (mirror > 15) {
+            document.getElementById('timeMirror').innerHTML = 'Mirror (Active) ' + mirror
+        } else {
+            document.getElementById('timeMirror').innerHTML = 'Mirror (Cooldown) ' + mirror
+        }
+        if (mirror == 0) {
+            mirrorTick = false
+            document.getElementById('timeMirror').innerHTML = 'Mirror'
+            document.getElementById('timeMirror').style.width = '200px'
         }
     }
 
