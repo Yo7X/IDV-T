@@ -68,7 +68,8 @@ let hunter = [
     `Nightmare`,
     `Clerk`,
     `Hermit`,
-    `night watch`
+    `night watch`,
+    `opera singer`
 ];
 
 let trait = [
