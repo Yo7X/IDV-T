@@ -1,0 +1,120 @@
+::move::
+    Send, Moving
+    Run, "C:\Program Files\BlueStacks_nxt\HD-Player.exe"
+    Sleep, 100
+    Send, {Click 1370 15}
+    Sleep, 100
+    Send, {Click 200 700} {Click} {Click} {Click}
+    return
+
+::right::
+    Send, Turning
+    Run, "C:\Program Files\BlueStacks_nxt\HD-Player.exe"
+    Sleep, 100
+    MouseClickDrag, Left, 800, 500, 1500, 500 
+    Sleep, 100
+    Send, {Click 200 700} {Click} {Click} {Click}
+    return
+
+::left::
+    Send, Turning
+    Run, "C:\Program Files\BlueStacks_nxt\HD-Player.exe"
+    Sleep, 100
+    MouseClickDrag, Left, 1500, 500, 800, 500
+    Sleep, 100
+    Send, {Click 200 700} {Click} {Click} {Click}
+    return
+
+::right2::
+    Send, Turning
+    Run, "C:\Program Files\BlueStacks_nxt\HD-Player.exe"
+    Sleep, 100
+    MouseClickDrag, Left, 800, 500, 1500, 500 
+    Sleep, 100
+    MouseClickDrag, Left, 800, 500, 1500, 500 
+    Sleep, 100
+    Send, {Click 200 700} {Click} {Click} {Click}
+    return
+
+::left2::
+    Send, Turning
+    Run, "C:\Program Files\BlueStacks_nxt\HD-Player.exe"
+    Sleep, 100
+    MouseClickDrag, Left, 1500, 500, 800, 500
+    Sleep, 100
+    MouseClickDrag, Left, 1500, 500, 800, 500
+    Sleep, 100
+    Send, {Click 200 700} {Click} {Click} {Click}
+    return
+
+::stop::
+    Send, Stopping
+    Run, "C:\Program Files\BlueStacks_nxt\HD-Player.exe"
+    Sleep, 100
+    Send, {Click 1370 15}{w}
+    Sleep, 100
+    Send, {Click 200 700} {Click} {Click} {Click}
+    return
+
+::item::
+    Send, Using
+    Run, "C:\Program Files\BlueStacks_nxt\HD-Player.exe"
+    Sleep, 100
+    SendInput, {Shift}
+    Sleep, 100
+    Send, {Click 200 700} {Click} {Click} {Click}
+    return
+
+::use::
+    Send, Interacting
+    Run, "C:\Program Files\BlueStacks_nxt\HD-Player.exe"
+    Sleep, 100
+    SendInput, {Space}
+    Sleep, 100
+    Send, {Click 200 700} {Click} {Click} {Click}
+    return
+
+::run::
+    Send, Running
+    Run, "C:\Program Files\BlueStacks_nxt\HD-Player.exe"
+    Sleep, 100
+    SendInput, {f}
+    Sleep, 100
+    Send, {Click 200 700} {Click} {Click} {Click}
+    return
+
+::walk::
+    Send, Walking
+    Run, "C:\Program Files\BlueStacks_nxt\HD-Player.exe"
+    Sleep, 100
+    SendInput, {c}
+    Sleep, 100
+    Send, {Click 200 700} {Click} {Click} {Click}
+    return
+
+::crawl::
+    Send, Crawling
+    Run, "C:\Program Files\BlueStacks_nxt\HD-Player.exe"
+    Sleep, 100
+    SendInput, {t}
+    Sleep, 100
+    Send, {Click 200 700} {Click} {Click} {Click}
+    return
+
+::decode::
+    Send, Decoding
+    Run, "C:\Program Files\BlueStacks_nxt\HD-Player.exe"
+    Sleep, 100
+    SendInput, {e}
+    Sleep, 100
+    Send, {Click 200 700} {Click} {Click} {Click}
+    return
+
+::calibrate::
+    Send, Calibrating
+    Run, "C:\Program Files\BlueStacks_nxt\HD-Player.exe"
+    Sleep, 100
+    SendInput, {Click 1200 750} {Click 1200 750}
+    Sleep, 600
+    Send, {Click 200 700} {Click} {Click} {Click}
+    return
