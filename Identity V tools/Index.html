@@ -28,9 +28,9 @@
             <p></p>
             <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 30px;" onclick="{showpage(timing)}">Skill timings</button>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 30px;" onclick="{showpage(more)}">More by me</button>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 23px;" onclick="{showpage(wheel)}">Wheel of misfortune</button>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Placeholder</button>
+            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 30px;" onclick="{showpage(more)}">More by me</button>
             <p></p>
             <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Placeholder</button>
             <p></p>
@@ -46,14 +46,16 @@
         <h3>By yo7</h3>
 
         <p style="font-size: 30px;">
-            <b>Please include a link to this site if you use these tools in a video/stream</b> <br><br>
+            <b>Please include a link to this site if you're using these tools in a video or stream</b> <br>
+            <b>it would mean a lot to me </b> <br><br>
 
             <!--<a href="img/Icon.png" download="">ss</a>-->
-
-            If you find these tools helfull I also have a <a href="https://discord.com/api/oauth2/authorize?client_id=970014291413565520&permissions=2147613712&scope=applications.commands%20bot" target="_blank">discord bot</a> centered around idv <br><br>
+            <!--If you find these tools helfull I also have a <a href="https://discord.com/api/oauth2/authorize?client_id=970014291413565520&permissions=2147613712&scope=applications.commands%20bot" target="_blank">discord bot</a> centered around idv <br><br>-->
             
-            If you want to give feedback, share ideas, or find any bugs <br>
-            join my <a href="https://discord.gg/WqvsKqURPr" target="_blank">discord server</a> ill see what I can do
+            Report bugs and share ideas for new features in my <a href="https://discord.gg/WqvsKqURPr" target="_blank">discord server</a><br>
+            I try to keep this site updated with cool and unique stuff for idv content creators<br><br>
+
+            Please contact <b>yo7.videos@gmail.com</b> if you have a sirius issue
         </p>
         </center>
     </div>
@@ -286,6 +288,49 @@
         </center>
     </div>
 
+    <div id="wheel" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+        <center>
+        <h1>Wheel of misfortune</h1>
+
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+        <details>
+            <summary>
+                Show controls
+            </summary>
+        <input type="checkbox" id="wheeltts">Use TTS<br>
+        <input id="autoSpin" type="checkbox"> Auto reroll
+        <input type="number" id="wheelTime" placeholder="30" value="30" title="time between rolls"><br>
+        <input type="checkbox" id="wheelRemove">Remove item after its rolled
+        <br><br>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="wheelAdd()" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Add custom item</button>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="wheelRemove()" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Remove item</button><br>
+        <input type="text" placeholder="item name" id="wheelTypeSpace">
+        <br>
+        <h2>Load preset lists</h2>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="listdefault()" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Default</button>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="listhunter()" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Hunter</button>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="listsurvivor()" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Survivor</button>
+        </details>
+<br>
+        <details onclick="showWheelList()">
+            <summary>
+                Show current list
+            </summary>
+            <div id="wheelList">
+            </div>
+        </details>
+        <br><br>
+        <button class="button" onclick="{spin()}" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Spin</button>
+        <div id="showWheelResults" style="display: none;">
+            <h2>Your item is</h2>
+            <h3 id="wheelResult">Result</h3>
+            <h4 id="wheelTimer">Timer ticking down</h4>
+        </div>
+        </center>
+    </div>
+
     <div id="more" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
         <center>
         <h1>More from yo7</h1>
@@ -330,7 +375,7 @@
             winx = window.innerWidth
             winy = window.innerHeight
 
-            console.log(obj)
+            //console.log(obj)
 
             const allElements = document.querySelectorAll('*');
 
@@ -358,5 +403,8 @@
     <script src="bingo.js"></script>
     <script src="randomizer.js"></script>
     <script src="timing.js"></script>
+    <script src="wheel.js"></script>
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 </body>
 </html>
