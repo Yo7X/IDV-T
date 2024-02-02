@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,34 +13,34 @@
 <body onload="size(); showpage(mainpage); first_draw();" onresize="size();">
     <div id="body decor" style="background-color: rgba(92, 30, 173, 0.185); width: 100px; height: 100px; position: absolute; top: 0px; left: 0px; z-index: -100000;"></div>
 
-    <div id="sidebar" style="background-color: rgb(92, 30, 173); width: 270px; border: 2px solid white; border-radius: 2%; height: 100px; position: absolute; top: 15px; left: 15px; overflow-y: scroll; direction: rtl;">
+    <div id="sidebar" class="sidebar" style="position: absolute; direction: rtl; width: 270px; top: 15px; left: 15px;">
         <center>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{showpage(mainpage)}">Main page</button>
+            <button class="button" onclick="{showpage(mainpage)}">Main page</button>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{showpage(tierlist)}" style="font-size: 25px;">Community tier list</button>
+            <button class="button" onclick="{showpage(tierlist)}" style="font-size: 25px;">Community tier list</button>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{showpage(bingo)}">Bingo card</button>
+            <button class="button" onclick="{showpage(bingo)}">Bingo card</button>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 30px;" onclick="{showpage(random)}">Randomizers</button>
+            <button class="button" style="font-size: 30px;" onclick="{showpage(random)}">Randomizers</button>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{showpage(trivia)}">Trivia</button>
+            <button class="button" onclick="{showpage(trivia)}">Trivia</button>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 30px;" onclick="{showpage(timing)}">Skill timings</button>
+            <button class="button" style="font-size: 30px;" onclick="{showpage(timing)}">Skill timings</button>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 23px;" onclick="{showpage(wheel)}">Wheel of misfortune</button>
+            <button class="button" style="font-size: 23px;" onclick="{showpage(wheel)}">Wheel of misfortune</button>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 25px;" onclick="{showpage(annotation)}">Map annotation</button>
+            <button class="button" style="font-size: 25px;" onclick="{showpage(annotation)}">Map annotation</button>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 30px;" onclick="{showpage(more)}">More by me</button>
+            <button class="button" style="font-size: 30px;" onclick="{showpage(more)}">More by Yo7</button>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Placeholder</button>
+            <button class="button">Placeholder</button>
             <p></p>
-            <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Placeholder</button>
+            <button class="button">Placeholder</button>
         </center>
     </div>
     
-    <div id="mainpage" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+    <div id="mainpage" class="hidden displayed page">
         <center>
         <h1>Identity V tools</h1>
         <h3>By yo7</h3>
@@ -54,20 +54,20 @@
             <!--<a href="img/Icon.png" download="">ss</a>-->
             
             I try to keep this site updated with cool and unique stuff for idv content creators. If your intrested in helping this project you can
-            report bugs and share ideas for new features in my <a href="https://discord.gg/WqvsKqURPr" target="_blank">discord server</a>
+            report bugs and share ideas for new features in my <a href="https://discord.gg/WqvsKqURPr" target="_blank">Discord server</a>
             
             <br><br>
 
-            If you find these tools helfull I also have a <a href="https://discord.com/api/oauth2/authorize?client_id=970014291413565520&permissions=2147613712&scope=applications.commands%20bot" target="_blank">discord bot</a> centered around idv<br>
-            It will 100% make voice calling during rank matches a lot more fun and is great for quickly reviewing character abilities
+            If you find these tools helfull I also have a <a href="https://discord.com/api/oauth2/authorize?client_id=970014291413565520&permissions=2147613712&scope=applications.commands%20bot" target="_blank">Discord bot</a> centered around idv<br>
+            You can invite it via the link above or by using the Discord App Directory
             <br><br>
 
-            Please contact <b>yo7.videos@gmail.com</b> if you have a sirius issue
+            Please contact me at <b>yo7.videos@gmail.com</b> if you have a serious issue
         </p>
         </center>
     </div>
 
-    <div id="tierlist" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+    <div id="tierlist" class="hidden displayed page">
         <center>
         <h1>Community tier list</h1>
 
@@ -204,68 +204,89 @@
         </center>
     </div>
 
-    <div id="bingo" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+    <div id="bingo" class="hidden displayed page">
+        <style>
+            .card {
+                padding: 10px; 
+                text-align:center;
+                cursor: pointer;
+                border: 1px solid white;
+                background: rgba(20, 14, 82, 0.582) !important;
+
+                transition: background 1s ease-out;
+            }
+
+            .checkedCard {
+                background: rgb(2, 158, 2) !important;
+                transition: background 0s;
+            }
+
+            .card:not(.checkedCard):hover {
+                background: rgba(35, 25, 146, 0.582) !important;
+
+                transition: background 0.2s ease-out;
+            }
+        </style>
         <center>
-        <table style="font-size: 30px; user-select: none; margin-top: 50px;">
-            <caption>Identity V bingo</caption>
-            <tr>
-                <td id="card_1" width="15px" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_1').style.backgroundColor === 'green') {document.getElementById('card_1').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_1').style.backgroundColor = 'green'}">zz</td>
-                <td id="card_2" width="15px" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_2').style.backgroundColor === 'green') {document.getElementById('card_2').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_2').style.backgroundColor = 'green'}">zz</td>
-                <td id="card_3" width="15px" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_3').style.backgroundColor === 'green') {document.getElementById('card_3').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_3').style.backgroundColor = 'green'}">zz</td>
-                <td id="card_4" width="15px" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_4').style.backgroundColor === 'green') {document.getElementById('card_4').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_4').style.backgroundColor = 'green'}">zz</td>
-            </tr>
-            <tr>
-                <td id="card_5" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_5').style.backgroundColor === 'green') {document.getElementById('card_5').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_5').style.backgroundColor = 'green'}">zz</td>
-                <td id="card_6" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_6').style.backgroundColor === 'green') {document.getElementById('card_6').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_6').style.backgroundColor = 'green'}">zz</td>
-                <td id="card_7" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_7').style.backgroundColor === 'green') {document.getElementById('card_7').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_7').style.backgroundColor = 'green'}">zz</td>
-                <td id="card_8" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_8').style.backgroundColor === 'green') {document.getElementById('card_8').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_8').style.backgroundColor = 'green'}">zz</td>
-            </tr>
-            <tr>
-                <td id="card_9" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_9').style.backgroundColor === 'green') {document.getElementById('card_9').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_9').style.backgroundColor = 'green'}">zz</td>
-                <td id="card_10" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_10').style.backgroundColor === 'green') {document.getElementById('card_10').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_10').style.backgroundColor = 'green'}">zz</td>
-                <td id="card_11" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_11').style.backgroundColor === 'green') {document.getElementById('card_11').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_11').style.backgroundColor = 'green'}">zz</td>
-                <td id="card_12" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_12').style.backgroundColor === 'green') {document.getElementById('card_12').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_12').style.backgroundColor = 'green'}">zz</td>
-            </tr>
-            <tr>
-                <td id="card_13" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_13').style.backgroundColor === 'green') {document.getElementById('card_13').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_13').style.backgroundColor = 'green'}">zz</td>
-                <td id="card_14" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_14').style.backgroundColor === 'green') {document.getElementById('card_14').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_14').style.backgroundColor = 'green'}">zz</td>
-                <td id="card_15" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_15').style.backgroundColor === 'green') {document.getElementById('card_15').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_15').style.backgroundColor = 'green'}">zz</td>
-                <td id="card_16" style="padding: 10px; text-align:center; background-color: rgba(20, 14, 82, 0.582); cursor: pointer;" onclick="if(document.getElementById('card_16').style.backgroundColor === 'green') {document.getElementById('card_16').style.backgroundColor = 'rgba(20, 14, 82, 0.582)'} else {document.getElementById('card_16').style.backgroundColor = 'green'}">zz</td>
-            </tr>
-        </table>
-        <br><br>
-        <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{scramble()}">Scramble</button>
-        <br><br><br><br>
-        <input id="typespace" class="button" onfocus="{highlight(this)}" onblur="{darken(this)}" style="width: 350px; height: 50px;" type="text" value="" placeholder="Input your own space"> 
-        <br><br>
-        <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{addspace()}">Add</button> 
-        <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="{removespace()}">Remove</button>
-    </div>
+            <table style="font-size: 30px; user-select: none; margin-top: 50px;">
+                <caption>Identity V bingo</caption>
+                <tr>
+                    <td id="card_1" width="15px" class="card">zz</td>
+                    <td id="card_2" width="15px" class="card">zz</td>
+                    <td id="card_3" width="15px" class="card">zz</td>
+                    <td id="card_4" width="15px" class="card">zz</td>
+                </tr>
+                <tr>
+                    <td id="card_5" class="card">zz</td>
+                    <td id="card_6" class="card">zz</td>
+                    <td id="card_7" class="card">zz</td>
+                    <td id="card_8" class="card">zz</td>
+                </tr>
+                <tr>
+                    <td id="card_9" class="card">zz</td>
+                    <td id="card_10" class="card">zz</td>
+                    <td id="card_11" class="card">zz</td>
+                    <td id="card_12" class="card">zz</td>
+                </tr>
+                <tr>
+                    <td id="card_13" class="card">zz</td>
+                    <td id="card_14" class="card">zz</td>
+                    <td id="card_15" class="card">zz</td>
+                    <td id="card_16" class="card">zz</td>
+                </tr>
+            </table>
+            <br><br>
+            <button class="button" onclick="{scramble()}">Scramble</button>
+            <br><br><br><br>
+            <input id="typespace" class="button" style="width: 350px; height: 50px;" type="text" value="" placeholder="Input your own space"> 
+            <br><br>
+            <button class="button" onclick="{addspace()}">Add</button> 
+            <button class="button" onclick="{removespace()}">Remove</button>
         </center>
     </div>
 
-    <div id="random" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+    <div id="random" class="hidden displayed page">
         <center>
         <h1>Randomizers</h1>
         <br><br>
-            <button onclick="{randomS1()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Survivor</button>
-            <button onclick="{randomS2()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 25px;">Survivor team</button>
-            <button onclick="{randomS3()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 20px;">Survivor persona</button>
-            <button onclick="{randomS4()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 20px;">Full survivor set</button>
+            <button onclick="{randomS1()}" class="button">Survivor</button>
+            <button onclick="{randomS2()}" class="button" style="font-size: 25px;">Survivor team</button>
+            <button onclick="{randomS3()}" class="button" style="font-size: 20px;">Survivor persona</button>
+            <button onclick="{randomS4()}" class="button" style="font-size: 20px;">Full survivor set</button>
 
             <br><br>
 
-            <button onclick="{randomH1()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Hunter</button>
-            <button onclick="{randomH2()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 25px;">Hunter trait</button>
-            <button onclick="{randomH3()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 25px;">Hunter persona</button>
-            <button onclick="{randomH4()}" class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" style="font-size: 25px;">Full hunter set</button>
+            <button onclick="{randomH1()}" class="button">Hunter</button>
+            <button onclick="{randomH2()}" class="button" style="font-size: 25px;">Hunter trait</button>
+            <button onclick="{randomH3()}" class="button" style="font-size: 25px;">Hunter persona</button>
+            <button onclick="{randomH4()}" class="button" style="font-size: 25px;">Full hunter set</button>
 
         <br><br>
             <div style="font-size: 30px; height: 600px;" id="rndm_result"></div><br>
         </center>
     </div>
 
-    <div id="trivia" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+    <div id="trivia" class="hidden displayed page">
         <center>
         <h1>Trivia</h1>
         <h1>Identity V trivia</h1>
@@ -280,7 +301,7 @@
         </center>
     </div>
 
-    <div id="timing" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+    <div id="timing" class="hidden displayed page">
         <center>
         <h1>Skill time counter</h1>
         <button id="timeGameStart" class="button" onclick="timeGameStart()">Game start</button> <br>
@@ -295,7 +316,7 @@
         </center>
     </div>
 
-    <div id="wheel" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+    <div id="wheel" class="hidden displayed page">
         <center>
         <h1>Wheel of misfortune</h1>
 
@@ -311,14 +332,14 @@
         <input type="number" id="wheelTime" placeholder="30" value="30" title="time between rolls"><br>
         <input type="checkbox" id="wheelRemove">Remove item after its rolled
         <br><br>
-        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="wheelAdd()" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Add custom item</button>
-        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="wheelRemove()" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Remove item</button><br>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="wheelAdd()">Add custom item</button>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="wheelRemove()">Remove item</button><br>
         <input type="text" placeholder="item name" id="wheelTypeSpace">
         <br>
         <h2>Load preset lists</h2>
-        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="listdefault()" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Default</button>
-        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="listhunter()" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Hunter</button>
-        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="listsurvivor()" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Survivor</button>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="listdefault()">Default</button>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="listhunter()">Hunter</button>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="listsurvivor()">Survivor</button>
         </details>
 <br>
         <details onclick="showWheelList()">
@@ -329,7 +350,7 @@
             </div>
         </details>
         <br><br>
-        <button class="button" onclick="{spin()}" onmouseover="{highlight(this)}" onmouseout="{darken(this)}">Spin</button>
+        <button class="button" onclick="{spin()}">Spin</button>
         <div id="showWheelResults" style="display: none;">
             <h2>Your item is</h2>
             <h3 id="wheelResult">Result</h3>
@@ -338,12 +359,12 @@
         </center>
     </div>
 
-    <div id="annotation" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+    <div id="annotation" class="hidden displayed page">
         <center>
         <h1>Map annotation</h1>
         <div style="position: relative;">
 
-        <div style="display: inline-block;">
+        <div id="cavasDisplayContainer" style="display: inline-block; margin-left: 0px;">
             <canvas id="canvas_dis" height="500px" width="500px"></canvas>
         </div>
 
@@ -352,7 +373,7 @@
         <br>
         <div>Choose base map</div>
 
-        <select id="choosemap" class="button" style="width:400px; height: fit-content;" onchange="draw_map(this)">
+        <select id="choosemap" class="button" style="width:400px; height: fit-content; background-color: rgb(100, 0, 183);" onchange="draw_map(this)">
             <option>Arms factory</option>
             <option>Red church</option>
             <option>Sacred heart hospital</option>
@@ -364,7 +385,7 @@
         </select>
         <br><br>
         <div>Choose icon to add</div>
-        <select class="button" style="width:400px; height: fit-content;" onchange="draw_icon(this)">
+        <select class="button" style="width:400px; height: fit-content; background-color: rgb(100, 0, 183);" onchange="draw_icon(this)">
             <option>Survivor</option>
             <option>Hunter</option>
             <option>Cipher</option>
@@ -373,7 +394,7 @@
         </select>
         <br><br>
         <div>Icon size</div>
-        <select class="button" style="width:400px; height: fit-content;" onchange="resize_icon(this)">
+        <select class="button" style="width:400px; height: fit-content; background-color: rgb(100, 0, 183);" onchange="resize_icon(this)">
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -382,7 +403,7 @@
         </select>
         <br><br>
         <div>Freedraw size</div>
-        <select class="button" style="width:400px; height: fit-content;" onchange="resize_freedraw(this)">
+        <select class="button" style="width:400px; height: fit-content; background-color: rgb(100, 0, 183);" onchange="resize_freedraw(this)">
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -391,23 +412,26 @@
         </select>
         <br><br>
         <div>Freedraw color</div>
-        <select class="button" style="width:400px; height: fit-content;" onchange="change_draw_color(this)">
+        <select class="button" style="width:400px; height: fit-content; background-color: rgb(100, 0, 183);" onchange="change_draw_color(this)">
             <option>Red</option>
             <option>White</option>
             <option>Black</option>
             <option>Green</option>
         </select>
-        <br>
+        <br><br>
+        <div style="margin-bottom: 7px;">Map size</div>
+        <button class="button" style="width: 100px;" id="addMapSize">+</button>
+        <button class="button" style="width: 100px" id="subtractMapSize">-</button>
         <div style="margin-bottom: 3%;"></div>
     </div>
 
     <br>
-    <button class="button" onmouseover="{highlight(this)}" onmouseout="{darken(this)}" onclick="clear_map()">Clear</button>
+    <button class="button" onclick="clear_map()">Clear</button>
 </div>
         </center>
     </div>
 
-    <div id="more" class="hidden displayed" style="background-color: rgba(29, 3, 88, 0.712); position: absolute; top: 15px; left: 0px; overflow-y: scroll; height: 0px; border: 2px solid white;">
+    <div id="more" class="hidden displayed page">
         <center>
         <h1>More from yo7</h1>
         <p style="font-size: 30px;">
@@ -436,20 +460,9 @@
         winx = window.innerWidth
         winy = window.innerHeight
 
-        console.log(winx, winy)
-
         document.getElementById('body decor').style.width = winx + 'px'
         document.getElementById('body decor').style.height = winy + 'px'
-
         document.getElementById('sidebar').style.height = winy - 35 + 'px'
-        }
-
-        function highlight(obj) {
-            obj.classList.add("hovering")
-        }
-
-        function darken(obj) {
-            obj.classList.remove("hovering");
         }
 
         let currentpage
@@ -457,8 +470,6 @@
         function showpage(obj) {
             winx = window.innerWidth
             winy = window.innerHeight
-
-            //console.log(obj)
 
             const allElements = document.querySelectorAll('*');
 
@@ -475,6 +486,15 @@
             obj.style.height = winy - 35 + 'px'
 
         };
+
+        let angle = 0
+        setInterval(function() {
+            angle++
+            document.getElementById('sidebar').style.background = `linear-gradient(${angle}deg, rgb(92, 30, 173), rgb(57, 16, 110), rgb(34, 7, 69))`
+            if (angle >= 360) {
+                angle = 0
+            }
+        }, 50)
 
     </script>
     <script src="trivia.js"></script>

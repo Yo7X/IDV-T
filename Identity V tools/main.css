@@ -26,12 +26,12 @@ a, a:visited, a:active {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(46, 0, 107); 
+    background: rgba(90, 189, 255, 0.438); 
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #a661ff; 
+    background: rgb(53, 167, 243);
 }
 
 table, th, td, caption{
@@ -52,11 +52,36 @@ table, th, td, caption{
     z-index: 99;
     height: 70px;
     width: 200px;
-    background-color: rgba(20, 14, 82, 0.582);
+    background: linear-gradient(180deg, rgba(20, 14, 82, 0.582), rgba(78, 21, 118, 0.582), rgba(143, 35, 175, 0.788));
+
+    transition: background 1s ease-out, border 1s ease-out, width 1s ease-out, height 1s ease-out;
 }
 
-.hovering {
-    background-color: rgba(143, 35, 175, 0.788);
+.button:hover {
+    background: linear-gradient(180deg,rgba(37, 26, 148, 0.582), rgba(110, 31, 167, 0.582), rgba(181, 46, 222, 0.788));
+    border: 3px solid white;
+    height: 85px;
+    width: 230px;
+    transition: background 0.2s ease-out, border 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, rgb(92, 30, 173), rgb(57, 16, 110), rgb(34, 7, 69));
+    border: 2px solid white;
+    border-radius: 2%;
+    height: 100px;
+    overflow-y: scroll;
+    
+}
+
+.page {
+    background: linear-gradient(180deg, rgba(29, 3, 88, 0.712), rgba(106, 14, 100, 0.712), rgba(114, 0, 0, 0.687));
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    overflow-y: scroll;
+    height: 0px;
+    border: 2px solid white;
 }
 
 .displayed {

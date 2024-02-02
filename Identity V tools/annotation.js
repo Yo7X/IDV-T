@@ -1,3 +1,28 @@
+document.getElementById('addMapSize').addEventListener('click', function () {
+    document.getElementById('canvas_dis').height = document.getElementById('canvas_dis').height + 25
+    document.getElementById('canvas_dis').width = document.getElementById('canvas_dis').width + 25
+    clear_map()
+
+    if (document.getElementById('canvas_dis').width > 500) {
+        document.getElementById('cavasDisplayContainer').style.display = 'flex'
+        document.getElementById('cavasDisplayContainer').style.marginLeft = '15px'
+    }
+})
+
+document.getElementById('subtractMapSize').addEventListener('click', function () {
+    document.getElementById('canvas_dis').height = document.getElementById('canvas_dis').height - 25
+    document.getElementById('canvas_dis').width = document.getElementById('canvas_dis').width - 25
+    clear_map()
+
+    if (document.getElementById('canvas_dis').width <= 500) {
+        document.getElementById('cavasDisplayContainer').style.display = 'inline-block'
+        document.getElementById('cavasDisplayContainer').style.marginLeft = '0px'
+    }
+})
+
+
+
+
 const canvas = document.getElementById("canvas_dis");
 const ctx = canvas.getContext("2d");
 
@@ -45,6 +70,7 @@ var freedraw = false
 var freedrawColor = "red"
 
 let drawing
+let clock
 
 //Draw icons onclick
 canvas.addEventListener("mousedown", function (evt) {
@@ -57,7 +83,7 @@ canvas.addEventListener("mousedown", function (evt) {
 });
 
 canvas.addEventListener("mousemove", function (evt) {
-    if(drawing) {
+    if (drawing == true) {
         var rect = canvas.getBoundingClientRect();
         ctx.beginPath();
         ctx.arc(evt.clientX - rect.left, evt.clientY - rect.top, freedrawSize, 0, 2 * Math.PI);
@@ -66,8 +92,11 @@ canvas.addEventListener("mousemove", function (evt) {
     }
 });
 
+
+
 canvas.addEventListener("mouseup", function () {
     drawing = false;
+    clearInterval(clock)
 });
 
 

@@ -18,6 +18,17 @@ spaces = [
     `Free space`
 ];
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    var cards = document.querySelectorAll('.card');
+
+    cards.forEach(function (card) {
+        card.addEventListener('click', function () {
+            card.classList.toggle('checkedCard');
+        });
+    });
+})
+
 temp = [];
 
 scramble()
@@ -61,3 +72,4 @@ function removespace() {
         }
     }
 }
+

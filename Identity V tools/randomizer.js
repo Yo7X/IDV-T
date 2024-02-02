@@ -39,7 +39,8 @@ let survivors = [
     `Weeping Clown`,
     `Professor`,
     `Antiquarian`,
-    `Journalist`
+    `Journalist`,
+    `Cheer leader`
 ];
 
 let hunter = [
@@ -69,7 +70,8 @@ let hunter = [
     `Clerk`,
     `Hermit`,
     `night watch`,
-    `opera singer`
+    `opera singer`,
+    `Fool gold`
 ];
 
 let trait = [
