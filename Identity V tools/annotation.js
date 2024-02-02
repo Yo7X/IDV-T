@@ -1,23 +1,25 @@
-document.getElementById('addMapSize').addEventListener('click', function () {
-    document.getElementById('canvas_dis').height = document.getElementById('canvas_dis').height + 25
-    document.getElementById('canvas_dis').width = document.getElementById('canvas_dis').width + 25
-    clear_map()
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById('addMapSize').addEventListener('click', function () {
+        document.getElementById('canvas_dis').height = document.getElementById('canvas_dis').height + 25
+        document.getElementById('canvas_dis').width = document.getElementById('canvas_dis').width + 25
+        clear_map()
 
-    if (document.getElementById('canvas_dis').width > 500) {
-        document.getElementById('cavasDisplayContainer').style.display = 'flex'
-        document.getElementById('cavasDisplayContainer').style.marginLeft = '15px'
-    }
-})
+        if (document.getElementById('canvas_dis').width > 500) {
+            document.getElementById('cavasDisplayContainer').style.display = 'flex'
+            document.getElementById('cavasDisplayContainer').style.marginLeft = '15px'
+        }
+    })
 
-document.getElementById('subtractMapSize').addEventListener('click', function () {
-    document.getElementById('canvas_dis').height = document.getElementById('canvas_dis').height - 25
-    document.getElementById('canvas_dis').width = document.getElementById('canvas_dis').width - 25
-    clear_map()
+    document.getElementById('subtractMapSize').addEventListener('click', function () {
+        document.getElementById('canvas_dis').height = document.getElementById('canvas_dis').height - 25
+        document.getElementById('canvas_dis').width = document.getElementById('canvas_dis').width - 25
+        clear_map()
 
-    if (document.getElementById('canvas_dis').width <= 500) {
-        document.getElementById('cavasDisplayContainer').style.display = 'inline-block'
-        document.getElementById('cavasDisplayContainer').style.marginLeft = '0px'
-    }
+        if (document.getElementById('canvas_dis').width <= 500) {
+            document.getElementById('cavasDisplayContainer').style.display = 'inline-block'
+            document.getElementById('cavasDisplayContainer').style.marginLeft = '0px'
+        }
+    })
 })
 
 
