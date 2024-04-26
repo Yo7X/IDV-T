@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identtiy V tools</title>
+
+    <link rel="icon" href="img/Icon.png" type="title/x-icon">
+
+    <link rel='stylesheet' href="main.css" type="text/css">
+</head>
+<body onload="size(); showpage(mainpage); first_draw();" onresize="size();">
+    <div id="body decor" style="background-color: rgba(92, 30, 173, 0.185); width: 100px; height: 100px; position: absolute; top: 0px; left: 0px; z-index: -100000;"></div>
+
+    <div id="sidebar" class="sidebar" style="position: absolute; direction: rtl; width: 270px; top: 15px; left: 15px;">
+        <center>
+            <p></p>
+            <button class="button" onclick="{showpage(mainpage)}">Main page</button>
+            <p></p>
+            <button class="button" onclick="{showpage(tierlist)}" style="font-size: 25px;">Community tier list</button>
+            <p></p>
+            <button class="button" onclick="{showpage(bingo)}">Bingo card</button>
+            <p></p>
+            <button class="button" style="font-size: 30px;" onclick="{showpage(random)}">Randomizers</button>
+            <p></p>
+            <button class="button" onclick="{showpage(trivia)}">Trivia</button>
+            <p></p>
+            <button class="button" style="font-size: 30px;" onclick="{showpage(timing)}">Skill timings</button>
+            <p></p>
+            <button class="button" style="font-size: 23px;" onclick="{showpage(wheel)}">Wheel of misfortune</button>
+            <p></p>
+            <button class="button" style="font-size: 25px;" onclick="{showpage(annotation)}">Map annotation</button>
+            <p></p>
+            <button class="button" style="font-size: 25px;" onclick="{showpage(characterRate)}">Rate</button>
+            <p></p>
+            <button class="button" style="font-size: 30px;" onclick="{showpage(mapGuesser)}">Map guesser</button>
+            <p></p>
+            <!--
+            <button class="button" style="font-size: 30px;" onclick="{showpage(geoGuesser)}">Name uwu</button>
+            <p></p>
+            -->
+            <button class="button" style="font-size: 30px;" onclick="{showpage(updates)}">Page updates </button>
+            <p></p>
+            <button class="button" style="font-size: 30px;" onclick="{showpage(more)}">More by Yo7</button>
+        </center>
+    </div>
+    
+    <div id="mainpage" class="hidden displayed page">
+        <center>
+        <h1>Identity V tools</h1>
+        <h3>By yo7</h3>
+
+        <p style="font-size: 30px; margin-left: 10%; margin-right: 10%;">
+            <b>Please add a link to this site if you use these tools in a video or stream</b> <br>
+            <b>(It would mean a lot to me) </b> <br><br>
+
+            This page has only been tested on PC however it should still work on mobile without to many issues.
+            <br><br>
+            <!--<a href="img/Icon.png" download="">ss</a>-->
+            
+            I try to keep this site updated with cool and unique stuff for idv content creators. If your intrested in helping this project you can
+            report bugs and share ideas for new features in my <a href="https://discord.gg/WqvsKqURPr" target="_blank">Discord server</a>
+            
+            <br><br>
+
+            If you find these tools helfull I also have a <a href="https://discord.com/api/oauth2/authorize?client_id=970014291413565520&permissions=2147613712&scope=applications.commands%20bot" target="_blank">Discord bot</a> centered around idv<br>
+            You can invite it via the link above or by using the Discord App Directory
+            <br><br>
+
+            Please contact me at <b>yo7.videos@gmail.com</b> if you have a serious issue
+        </p>
+        </center>
+    </div>
+
+    <div id="tierlist" class="hidden displayed page">
+        <center>
+        <h1>Community tier list</h1>
+
+        <h3 id="tempnote" style="display: block;"> You can vote for character tiers using my <a href="https://discord.com/api/oauth2/authorize?client_id=970014291413565520&permissions=2147613712&scope=applications.commands%20bot" target="_blank">discord bot</a>
+            <br>At the end of each week votes are calculated the data is displayed here
+            <br><b>This feature is currently disabled see "page updates" for more info</b>
+        </h3>
+
+        <button id="tempnote2" style="display: block;" onclick="{des()}">Destroy note</button>
+        <script>
+            function des() {
+                document.getElementById('tempnote').style.display = 'none'
+                document.getElementById('tempnote2').style.display = 'none'
+            }
+        </script>
+
+        <br>
+
+        <div style="background-color: gold; overflow: hidden; margin-left: 60px; margin-right: 50px; height: fit-content;">
+            <img src="tierlist/S.png" width="160px" height="100px" align="left" style="background-color: rgb(197, 168, 0);" loading="lazy">
+
+            <img src="tierlist/Mercinary.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Priestess.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Cowboy.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Acrobat.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Officer.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Post man.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/ember.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/wu.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/sculptor.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/wax.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/clerk.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            
+        </div>
+
+
+        <br>
+
+
+        <div style="background-color: rgb(197, 0, 197); overflow: hidden; margin-left: 60px; margin-right: 50px; height: fit-content;">
+            <img src="tierlist/A.png" width="160px" height="100px" align="left" style="background-color: purple" loading="lazy">
+
+            <img src="tierlist/Magician.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Prefumer.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Dancer.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Embalmer.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Prospector.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Barmaid.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Ento.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Phycologist.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Little girl.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy"> 
+            <img src="tierlist/Geisha.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/axeboy.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/bloodyqueen.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/guard.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/disiple.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/opera singer.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+        </div>
+
+
+        <br>
+
+
+        <div style="background-color: rgb(0, 180, 0); overflow: hidden; margin-left: 60px; margin-right: 50px; height: fit-content;">
+            <img src="tierlist/B.png" width="160px" height="100px" align="left" style="background-color: green;" loading="lazy">
+
+            <img src="tierlist/Doctor.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Gardener.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Explorer.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Mechanic.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Enchantress.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Painter.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Toy merchant.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Novolist.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Antiquatian.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/journalist.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/clown.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/ripper.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/feaster.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/dreamwitch.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/nightmare.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+        </div>
+
+
+        <br>
+
+
+        <div style="background-color: cyan; overflow: hidden; margin-left: 60px; margin-right: 50px; height: fit-content;">
+            <img src="tierlist/C.png" width="160px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+
+            <img src="tierlist/Lucky_guy.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Coordinator.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Forward.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/mindseye.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Seer.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Grave keeper.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Batter.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Professor.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/weaver.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/reptilian.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/violinist.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/naiad.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+        </div>
+
+
+        <br>
+
+
+        <div style="background-color: red; overflow: hidden; margin-left: 60px; margin-right: 50px; height: fit-content;">
+            <img src="tierlist/D.png" width="160px" height="100px" align="left" style="background-color: rgb(189, 0, 0)" loading="lazy">
+
+            <img src="tierlist/Lawyer.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Thief.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Prisoner.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Patient.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/keeper.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/photo.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/madeyes.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/wheel.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/hermit.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+        </div>
+
+
+        <br>
+
+
+        <div style="background-color: grey; overflow: hidden; margin-left: 60px; margin-right: 50px; height: fit-content;">
+            <img src="tierlist/Unranked.png" width="160px" height="100px" align="left" style="background-color: rgb(80, 80, 80)" loading="lazy">
+
+            <img src="tierlist/Wildling.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/Weeping.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/undead.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+            <img src="tierlist/night watch.png" width="100px" height="100px" align="left" style="background-color: rgb(0, 189, 189);" loading="lazy">
+        </div>
+        </center>
+    </div>
+
+    <div id="bingo" class="hidden displayed page">
+        <style>
+            .card {
+                padding: 10px; 
+                text-align:center;
+                cursor: pointer;
+                border: 1px solid white;
+                background: rgba(20, 14, 82, 0.582) !important;
+
+                transition: background 1s ease-out;
+            }
+
+            .checkedCard {
+                background: rgb(2, 158, 2) !important;
+                transition: background 0s;
+            }
+
+            .card:not(.checkedCard):hover {
+                background: rgba(35, 25, 146, 0.582) !important;
+
+                transition: background 0.2s ease-out;
+            }
+        </style>
+        <center>
+            <table style="font-size: 30px; user-select: none; margin-top: 50px;">
+                <caption>Identity V bingo</caption>
+                <tr>
+                    <td id="card_1" width="15px" class="card">zz</td>
+                    <td id="card_2" width="15px" class="card">zz</td>
+                    <td id="card_3" width="15px" class="card">zz</td>
+                    <td id="card_4" width="15px" class="card">zz</td>
+                </tr>
+                <tr>
+                    <td id="card_5" class="card">zz</td>
+                    <td id="card_6" class="card">zz</td>
+                    <td id="card_7" class="card">zz</td>
+                    <td id="card_8" class="card">zz</td>
+                </tr>
+                <tr>
+                    <td id="card_9" class="card">zz</td>
+                    <td id="card_10" class="card">zz</td>
+                    <td id="card_11" class="card">zz</td>
+                    <td id="card_12" class="card">zz</td>
+                </tr>
+                <tr>
+                    <td id="card_13" class="card">zz</td>
+                    <td id="card_14" class="card">zz</td>
+                    <td id="card_15" class="card">zz</td>
+                    <td id="card_16" class="card">zz</td>
+                </tr>
+            </table>
+            <br><br>
+            <button class="button" onclick="{scramble()}">Scramble</button>
+            <br><br><br><br>
+            <input id="typespace" class="button" style="width: 350px; height: 50px;" type="text" value="" placeholder="Input your own space"> 
+            <br><br>
+            <button class="button" onclick="{addspace()}">Add</button> 
+            <button class="button" onclick="{removespace()}">Remove</button>
+        </center>
+    </div>
+
+    <div id="random" class="hidden displayed page">
+        <center>
+        <h1>Randomizers</h1>
+        <br><br>
+            <button onclick="{randomS1()}" class="button">Survivor</button>
+            <button onclick="{randomS2()}" class="button" style="font-size: 25px;">Survivor team</button>
+            <button onclick="{randomS3()}" class="button" style="font-size: 20px;">Survivor persona</button>
+            <button onclick="{randomS4()}" class="button" style="font-size: 20px;">Full survivor set</button>
+
+            <br><br>
+
+            <button onclick="{randomH1()}" class="button">Hunter</button>
+            <button onclick="{randomH2()}" class="button" style="font-size: 25px;">Hunter trait</button>
+            <button onclick="{randomH3()}" class="button" style="font-size: 25px;">Hunter persona</button>
+            <button onclick="{randomH4()}" class="button" style="font-size: 25px;">Full hunter set</button>
+
+        <br><br>
+            <div style="font-size: 30px; height: 600px;" id="rndm_result"></div><br>
+        </center>
+    </div>
+
+    <div id="trivia" class="hidden displayed page">
+        <center>
+        <h1>Trivia</h1>
+        <h1>Identity V trivia</h1>
+            <div id="wl" style="font-size: 50px;">Correct: N/A</div><br>
+            <hr>
+            <br>
+            <div id="question" style="font-size: 33px;">Question</div><br>
+            <div id="cat" style="font-size: 33px;">Category</div><br>
+            <button id="ta1" onclick="{ans01()}" class="button" style="position:relative; height: fit-content; background-color: rgb(129, 15, 139); display: inline;">Answer01</button>
+            <button id="ta2" onclick="{ans02()}" class="button" style="position:relative; height: fit-content; background-color: rgb(129, 15, 139); display: inline;">Answer02</button>
+            <button id="ta3" onclick="{ans03()}" class="button" style="position:relative; height: fit-content; background-color: rgb(129, 15, 139); display: inline;">Answer03</button>
+        </center>
+    </div>
+
+    <div id="timing" class="hidden displayed page">
+        <center>
+        <h1>Skill time counter</h1>
+        <!--<button id="timeGameStart" class="button" style="margin-bottom: 5px;">Game start</button> <br>-->
+        <button id="timeReset" class="button">Reset</button> <br><br>
+        <button id="timeBlink" class="button" style="margin-bottom: 5px;">Blink</button> <br>
+        <button id="timeTeleport" class="button" style="font-size: 25px; margin-bottom: 5px;">Teleport</button> <br>
+        <button id="timePatroler" class="button" style="font-size: 30px; margin-bottom: 5px;">Patroler</button> <br>
+        <button id="timeExcitement" class="button" style="font-size: 20px; margin-bottom: 5px;">Excitement</button> <br>
+        <button id="timeAbnormal" class="button" style="font-size: 25px; margin-bottom: 5px;">Abnormal</button> <br>
+        <br>
+        <!--
+        <button id="timeMirror" class="button" style="margin-bottom: 5px;">BQ mirror</button> <br>
+        <button id="timeCats" class="button" onclick="">Ann cats</button> <br>
+        -->
+        </center>
+    </div>
+
+    <div id="wheel" class="hidden displayed page">
+        <center>
+        <h1>Wheel of misfortune</h1>
+
+        <details>
+            <summary>
+                Show controls
+            </summary>
+        <!--<input type="checkbox" id="wheeltts">Use TTS--><br>
+        <input id="autoSpin" type="checkbox"> Auto reroll
+        <input type="number" id="wheelTime" placeholder="30" value="30" title="time between rolls"><br>
+        <!--<input type="checkbox" id="wheelRemove">Remove item after its rolled-->
+        <br><br>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="wheelAdd()">Add custom item</button>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="wheelRemove()">Remove item</button><br>
+        <input type="text" placeholder="item name" id="wheelTypeSpace">
+        <br>
+        <h2>Load preset lists</h2>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="listdefault()">Default</button>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="listhunter()">Hunter</button>
+        <button class="button" style="font-size: 20px; height: fit-content; width: fit-content;" onclick="listsurvivor()">Survivor</button>
+        </details>
+<br>
+        <details onclick="showWheelList()">
+            <summary>
+                Show current list
+            </summary>
+            <div id="wheelList">
+            </div>
+        </details>
+        <br><br>
+        <button class="button" onclick="{spin()}">Spin</button>
+        <div id="showWheelResults" style="display: none;">
+            <h2>Your item is</h2>
+            <h3 id="wheelResult">Result</h3>
+            <h4 id="wheelTimer">Timer ticking down</h4>
+        </div>
+        </center>
+    </div>
+
+    <div id="annotation" class="hidden displayed page">
+        <center>
+        <h1>Map annotation</h1>
+        <div style="position: relative;">
+
+        <div id="cavasDisplayContainer" style="display: inline-block; margin-left: 0px;">
+            <canvas id="canvas_dis" height="500px" width="500px"></canvas>
+        </div>
+
+        <div style="position: absolute; top: 0; left: 50%; margin-left: 275px; height: 495px; border: 2px solid white; overflow-y: scroll;">
+        <div style="font-size: 50px;">Settings</div>
+        <br>
+        <div>Choose base map</div>
+
+        <select id="choosemap" class="button" style="width:400px; height: fit-content; background-color: rgb(100, 0, 183);" onchange="draw_map(this)">
+            <option>Arms factory</option>
+            <option>Red church</option>
+            <option>Sacred heart hospital</option>
+            <option>Lakeside village</option>
+            <option>Moonlit river park</option>
+            <option>Leos memory</option>
+            <option>Eversleeping town</option>
+            <option>China town</option>
+        </select>
+        <br><br>
+        <div>Choose icon to add</div>
+        <select class="button" style="width:400px; height: fit-content; background-color: rgb(100, 0, 183);" onchange="draw_icon(this)">
+            <option>Survivor</option>
+            <option>Hunter</option>
+            <option>Cipher</option>
+            <option>Dungeon</option>
+            <option>Freedraw</option>
+        </select>
+        <br><br>
+        <div>Icon size</div>
+        <select class="button" style="width:400px; height: fit-content; background-color: rgb(100, 0, 183);" onchange="resize_icon(this)">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <br><br>
+        <div>Freedraw size</div>
+        <select class="button" style="width:400px; height: fit-content; background-color: rgb(100, 0, 183);" onchange="resize_freedraw(this)">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <br><br>
+        <div>Freedraw color</div>
+        <select class="button" style="width:400px; height: fit-content; background-color: rgb(100, 0, 183);" onchange="change_draw_color(this)">
+            <option>Red</option>
+            <option>White</option>
+            <option>Black</option>
+            <option>Green</option>
+        </select>
+        <br><br>
+        <div style="margin-bottom: 7px;">Map size</div>
+        <button class="button" style="width: 100px;" id="addMapSize">+</button>
+        <button class="button" style="width: 100px" id="subtractMapSize">-</button>
+        <div style="margin-bottom: 3%;"></div>
+    </div>
+
+    <br>
+    <button class="button" onclick="clear_map()">Clear</button>
+    </div>
+    </center>
+</div>
+
+    <div id="geoGuesser" class="hidden displayed page">
+        <img src="mapPictures/arms_easy00.png">
+        <canvas style="border: 2px solid white"></canvas>
+    </div>
+
+    <div id="mapGuesser" class="hidden displayed page">
+        <center>
+            <h1>Guess the map</h1>
+            <p id="mg_score">Score 0/0</p>
+
+            <div id="mg_dificultyContainer" style="display: block;">
+                <button id="mg_easy" class="button">Easy</button>
+                <button id="mg_medium" class="button">Medium</button>
+                <button id="mg_hard" class="button">Hard</button>
+            </div>
+
+            <div id="mg_gameContainer" style="display: none;">
+                <img id="mg_map" alt="Image failed to load" src="tierlist/A.png" width="500px" height="500px"> <br>
+                <button id="mg_button01" class="button" style="height: fit-content; padding: 1%;">Choice 1</button>
+                <button id="mg_button02" class="button" style="height: fit-content; padding: 1%;">Choice 2</button>
+                <button id="mg_button03" class="button" style="height: fit-content; padding: 1%;">Choice 3</button>
+                <br>
+                <button id="mg_return" class="button" style="height: fit-content; padding: 1%; margin-top: 1%;">Return</button>
+                
+                
+            </div>
+        </center>
+    </div>
+
+    <div id="characterRate" class="hidden displayed page">
+        <center>
+            <h1>Rate chracters</h1>
+
+            <img id="rate_image" src="img/Acrobat.png" height="250px" width="250px"> <br> <br> <br>
+
+            <div style="display: flex; justify-content: center; user-select: none;">
+                <div id="rate_one" style="background-color: rgb(255, 10, 10); border-radius: 50%; width: 100px; height: 100px; display: grid; place-items: center; font-size: 40px; margin: 10px; cursor: pointer;">1</div>
+                <div id="rate_two" style="background-color: rgb(255, 136, 0); border-radius: 50%; width: 100px; height: 100px; display: grid; place-items: center; font-size: 40px; margin: 10px; cursor: pointer;">2</div>
+                <div id="rate_three" style="background-color: rgb(255, 251, 0); border-radius: 50%; width: 100px; height: 100px; display: grid; place-items: center; font-size: 40px; margin: 10px; cursor: pointer;">3</div>
+                <div id="rate_four" style="background-color: rgb(183, 255, 0); border-radius: 50%; width: 100px; height: 100px; display: grid; place-items: center; font-size: 40px; margin: 10px; cursor: pointer;">4</div>
+                <div id="rate_five" style="background-color: rgb(17, 255, 0); border-radius: 50%; width: 100px; height: 100px; display: grid; place-items: center; font-size: 40px; margin: 10px; cursor: pointer;">5</div>
+            </div>
+        </center>
+    </div>
+
+    <div id="updates" class="hidden displayed page">
+        <div style="margin-left: 3%;">
+            <h1>Page updates</h1>
+            <p>
+                <b>General</b> <br>
+                -Better css for just everything<br>
+                -I fixed all the random errors exploding in the console ay least I hope I did <br>
+                -Made cute custom logos that fit the site theeme for my other platforms I thinks its better than a wall of links but still should be better<br>
+                -A back end now exists kind of im still in the stage of smashing my head off the keyboard and hoping things work<br>
+                -This page is gonna have so many speling errors because I have no autocorrect lmao<br>
+                <br>
+                <b>Community tierlist</b> <br>
+                -This is broken right now because of me having to move the discord bot over to new hosting and basically rewrite all the endpoints :( <br>
+                <br>
+                <b>Bingo card</b> <br>
+                -Messed around a bit w this to remove a random error that was annoying me<br>
+                -Added some reactions when you drag the mouse over the card and gave squares a nice fade when you check and uncheck them<br>
+                -I will get around to making the addition to custom spaces easier some day <br>
+                <br>
+                <b>Randomizers</b> <br>
+                -I added cheerleader, fools gold, and puppeteer finally<br>
+                -and Ivy now I really need to update the github code<br>
+                <br>
+                <b>Trivia</b> <br>
+                -Legit nothing right now<br>
+                <br>
+                <b>Skill timing</b> <br>
+                -This page works again now <br>
+                -I redid all the js on this page to be better and more clean<br>
+                -The game start and character skill timers are removed for now ill add them back when I have time to open the game and write down all the cd times again<br>
+                <br>
+                <b>Wheel of misfortune</b> <br>
+                -My way of getting text to speach to work is depricated now so I will have to remake this feature at some point its removed for the forseeable future<br>
+                -The remove after roll feature is currently broken and I have no motivation to fix it right now<br>
+                -Tbh this page needs an overhaul <br>
+                <br>
+                <b>Map annotation</b> <br>
+                -Added buttons to increase and decrease the size of the map but it breaks the styling<br>
+                -Fixed freedraw not making smooth lines when the mouse is moved quickly<br>
+                -Added a hotkey to clear the map<br>
+                -This page might need to be completely redone in the future because I think it has a lot of potential<br>
+                <br>
+                <b>Map guesser</b> <br>
+                -I will add more maps later probably they are just a masive pain in the ass to put in so im procrastinating<br>
+                -The code is also pretty bad and has a lot of repeating segments ill need to optimize as well at some point <br>
+                -Im happy with this version of the page for now <br>
+                <br>
+                <b>Unnamed</b> <br>
+                -Same problem as map guesser the amout of images needed to fully realise the idea so really iritating even if I reuse the ones I already have <br>
+                -This one and map guesser are mostly just proof of concepts because I saw other ytbers in diferent nitches do similar stuff and as usual I set out to build an automated version of it <br>
+                -I will make videos on both of these new ideas sometime soon so I wont drag my feet to much finishing them lol :c
+            </p>
+        </div>
+    </div>
+
+    <div id="more" class="hidden displayed page">
+        <h1 align="center">More from yo7</h1>
+
+        <a href="https://www.youtube.com/channel/UCnHHxFU-nYnuKMC7TKnhXqA" target="_blank" style="display: flex;">
+            <p style="flex-basis: 39%;"></p>
+            <img src="img/costomYoutubeLogo.png" width="175px" height="100px" alt="" style="flex-basis: 5%;"> 
+            <p style="font-size: 30px; flex-basis: 35%;">YouTube</p>
+        </a>
+        <br>
+        <a href="https://github.com/Yo7X" target="_blank" style="display: flex;">
+            <p style="flex-basis: 41%;"></p>
+            <img src="img/customGithubLogo.png" width="175px" height="100px" alt="" style="flex-basis: 5%;">
+            <p style="font-size: 30px; flex-basis: 35%; margin-left: 3%;">Github</p>
+        </a>
+        <br>
+        <a href="https://discord.gg/WqvsKqURPr" target="_blank" style="display: flex;">
+            <p style="flex-basis: 41%;"></p>
+            <img src="img/customDiscordLogo.png" width="150px" height="70px" alt="" style="flex-basis: 5%; margin-top: 1%;">
+            <p style="font-size: 30px; flex-basis: 35%; margin-left: 3%;">Discord server</p>
+        </a>
+        <br>
+        <a href="https://discord.com/api/oauth2/authorize?client_id=970014291413565520&permissions=2147613712&scope=applications.commands%20bot" target="_blank" style="display: flex;">
+            <p style="flex-basis: 39.2%;"></p>
+            <img src="img/customDiscordBotLogo.png" width="175px" height="100px" alt="" style="flex-basis: 5%;">
+            <p style="font-size: 30px; flex-basis: 35%; margin-left: 1%;">Discord bot</p>
+        </a>
+        <br>
+        <a href="https://paypal.me/Yo7dv?country.x=CA&locale.x=en_US" target="_blank" style="display: flex;">
+            <p style="flex-basis: 40%;"></p>
+            <img src="img/customPaypalLogo.png" width="175px" height="100px" alt="" style="flex-basis: 5%;">
+            <p style="font-size: 30px; flex-basis: 35%; margin-left: 3%;">Donate</p>
+        </a>
+    </div>
+
+    <script>
+        let winx
+        let winy
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key == 'p') {
+                console.log(document.getElementById("canvas_dis").style.left)
+            }
+        });
+
+        function size() {
+        winx = window.innerWidth
+        winy = window.innerHeight
+
+        document.getElementById('body decor').style.width = winx + 'px'
+        document.getElementById('body decor').style.height = winy + 'px'
+        document.getElementById('sidebar').style.height = winy - 35 + 'px'
+        }
+
+        let currentpage
+
+        function showpage(obj) {
+            winx = window.innerWidth
+            winy = window.innerHeight
+
+            const allElements = document.querySelectorAll('*');
+
+            allElements.forEach((element) => {
+                element.classList.remove('displayed');
+            });
+
+            x = parseInt(document.getElementById('sidebar').style.width)
+
+            obj.classList.add("displayed")
+            obj.style.left = x + 40 + 'px'
+
+            obj.style.width = winx - 330 + 'px'
+            obj.style.height = winy - 35 + 'px'
+
+        };
+
+        let angle = 0
+        setInterval(function() {
+            angle++
+            document.getElementById('sidebar').style.background = `linear-gradient(${angle}deg, rgb(92, 30, 173), rgb(57, 16, 110), rgb(34, 7, 69))`
+            if (angle >= 360) {
+                angle = 0
+            }
+        }, 50)
+
+    </script>
+    <script src="trivia.js"></script>
+    <script src="bingo.js"></script>
+    <script src="randomizer.js"></script>
+    <script src="timing.js"></script>
+    <script src="wheel.js"></script>
+    <script src="annotation.js"></script>
+    <script src="mapGuesser.js"></script>
+    <script src="rate.js"></script>
+</body>
+</html>
